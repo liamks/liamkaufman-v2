@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Liam Kaufman</title>
-    <link>http://localhost:1313/</link>
+    <link>http://www.example.com/</link>
     <description>Recent content on Liam Kaufman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 29 Oct 2025 19:48:53 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NHS AI Trial Delivers Savings</title>
-      <link>http://localhost:1313/posts/nhs-ai-trial-delivers-savings/</link>
+      <link>http://www.example.com/posts/nhs-ai-trial-delivers-savings/</link>
       <pubDate>Wed, 29 Oct 2025 19:48:53 -0400</pubDate>
-      <guid>http://localhost:1313/posts/nhs-ai-trial-delivers-savings/</guid>
+      <guid>http://www.example.com/posts/nhs-ai-trial-delivers-savings/</guid>
       <description>## NHS AI Trial Delivers Cost Savings&#xA;&#xA;asdfasdf</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://www.example.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://www.example.com/about/</guid>
       <description>&lt;p&gt;&#xA;    Liam Kaufman currently leads product at Cambridge Cognition, a company&#xA;    that specializes in computerized cognitive assessments and speech-based&#xA;    biomarkers. From time to time Liam writes about AI, medicine and product. &#xA;    The intention of this site is to help him learn about these topics through&#xA;    writing.&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;    Prior to Cambridge Cognition, Liam was the cofounder and CEO of Winterlight Labs.&#xA;    Winterlight developed speech-based biomarkers which were used by multiple biotech and life science&#xA;    companies to measure response to treatment and change overtime across neurology &#xA;    and psychiatry. Winterlight was venture backed and sold to Cambridge Cognition&#xA;    in January 2023.&#xA;&lt;/p&gt;</description>
     </item>
   </channel>

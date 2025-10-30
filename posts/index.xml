@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on </title>
-    <link>//localhost:1313/posts/</link>
-    <description>Recent content in Posts on </description>
+    <title>Posts on Liam Kaufman</title>
+    <link>http://www.example.com/posts/</link>
+    <description>Recent content in Posts on Liam Kaufman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 29 Oct 2025 19:48:53 -0400</lastBuildDate>
-    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.example.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NHS AI Trial Delivers Savings</title>
-      <link>//localhost:1313/posts/nhs-ai-trial-delivers-savings/</link>
+      <link>http://www.example.com/posts/nhs-ai-trial-delivers-savings/</link>
       <pubDate>Wed, 29 Oct 2025 19:48:53 -0400</pubDate>
-      <guid>//localhost:1313/posts/nhs-ai-trial-delivers-savings/</guid>
+      <guid>http://www.example.com/posts/nhs-ai-trial-delivers-savings/</guid>
       <description>## NHS AI Trial Delivers Cost Savings&#xA;&#xA;asdfasdf</description>
     </item>
   </channel>
