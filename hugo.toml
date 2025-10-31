@@ -3,6 +3,7 @@ title = "Liam Kaufman"
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
+publishDir = "public"
 
 
 [pagination]
@@ -12,9 +13,10 @@ pagerSize = 20
   [caches.images]
     dir = ':cacheDir/images'
 
+
+
 [services]
-[services.disqus]
-shortname = "yourdiscussshortname"
+
 
 [markup.highlight]
 style = "github-dark"
