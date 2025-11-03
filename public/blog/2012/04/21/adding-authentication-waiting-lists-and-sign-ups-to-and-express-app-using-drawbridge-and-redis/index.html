@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <title>Liam Kaufman</title>
+<head>
+  <title>
+  Adding Authentication, Waiting Lists and Sign Ups to an Express App Using Drawbridge.js and Redis · Liam Kaufman
+</title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
@@ -26,7 +28,7 @@ Given the authentication options for Express.js I wanted to create a module that
   <meta name="twitter:title" content="Adding Authentication, Waiting Lists and Sign Ups to an Express App Using Drawbridge.js and Redis">
   <meta name="twitter:description" content="There are several popular modules for adding password-based user authentication to an Express.js app. Unfortunately, they require writing lots of code to get started. I prefer the approach that authentication libraries like Devise take: they generate code and views, and you’re free to modify, or delete, what’s created. Given the authentication options for Express.js I wanted to create a module that would make adding user authentication quick and easy. Moreover, I also wanted developers to be free to edit and modify the generated views. In addition to authentication I wanted the module to handle sign ups (the type you see on a just-launched startup’s page) and to handle waiting lists and invitations. Based on the module&#39;s functionality I&#39;ve decided to call it Drawbridge.js.">
 
-<meta property="og:url" content="http://localhost:1313/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/">
+<meta property="og:url" content="http://www.example.com/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/">
   <meta property="og:site_name" content="Liam Kaufman">
   <meta property="og:title" content="Adding Authentication, Waiting Lists and Sign Ups to an Express App Using Drawbridge.js and Redis">
   <meta property="og:description" content="There are several popular modules for adding password-based user authentication to an Express.js app. Unfortunately, they require writing lots of code to get started. I prefer the approach that authentication libraries like Devise take: they generate code and views, and you’re free to modify, or delete, what’s created. Given the authentication options for Express.js I wanted to create a module that would make adding user authentication quick and easy. Moreover, I also wanted developers to be free to edit and modify the generated views. In addition to authentication I wanted the module to handle sign ups (the type you see on a just-launched startup’s page) and to handle waiting lists and invitations. Based on the module&#39;s functionality I&#39;ve decided to call it Drawbridge.js.">
@@ -39,7 +41,7 @@ Given the authentication options for Express.js I wanted to create a module that
 
 
 
-<link rel="canonical" href="http://localhost:1313/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/">
+<link rel="canonical" href="http://www.example.com/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -49,7 +51,7 @@ Given the authentication options for Express.js I wanted to create a module that
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -99,7 +101,7 @@ Given the authentication options for Express.js I wanted to create a module that
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://localhost:1313/">
+    <a class="navigation-title" href="http://www.example.com/">
       Liam Kaufman
     </a>
     
@@ -129,6 +131,124 @@ Given the authentication options for Express.js I wanted to create a module that
 
     <div class="content">
       
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://www.example.com/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/">
+              Adding Authentication, Waiting Lists and Sign Ups to an Express App Using Drawbridge.js and Redis
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2012-04-21T00:00:00Z">
+                April 21, 2012
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        
+<p>
+There are several popular modules for adding password-based user authentication to an Express.js app. Unfortunately, they require writing lots of code to get started. I prefer the approach that authentication libraries like Devise take: they generate code and views, and you’re free to modify, or delete, what’s created. 
+</p>
+
+<p>
+Given the authentication options for Express.js I wanted to create a module that would make adding user authentication quick and easy. Moreover, I also wanted developers to be free to edit and modify the generated views. In addition to authentication I wanted the module to handle sign ups (the type you see on a just-launched startup’s page) and to handle waiting lists and invitations. Based on the module's functionality I've decided to call it Drawbridge.js.
+</p>
+
+<h2>User Authentication with Drawbridge.js</h2>
+<p>
+Drawbridge.js uses Redis to persists its data, but it’s possible for developers to create other database adapters for Drawbridge (pull-requests accepted). I chose Redis because its ability to pipeline multiple commands reducing round trips between the server and the database. The atomic nature of pipelined commands obviates a lot of complex callbacks and makes the resulting code much easier to understand. Overall Redis is easy to use, easy to understand and fast - great features for an authentication module. 
+</p>
+<p>
+To send email, Drawbridge uses either nodemailer, or the postmark modules. I included the <a href="https://postmarkapp.com">Postmark</a> option because I'm currently using it and I like it. However, developers are free to add additional email adapters.
+</p>
+
+<h2>Drawbridge Screencast</h2>
+<p>
+I’ve created a short screencast to show how easy it is to add drawbridge to an existing Express.js application. Before you watch the screencast it’s important that I outline a couple of caveats:
+</p>
+<p>
+  <ol>
+    <li>Drawbridge is not ready for production - it’s basically a working prototype.</li>
+    <li>Drawbridge views and variables are inconsistently named, that will need to be fixed.</li>
+    <li>The code needs refactoring and more testing.</li>
+    <li>Drawbridge needs to be picked apart for security issues.</li>
+  </ol>
+</p>
+<p>
+With those caveats out of the way here is the video:
+</p>
+
+<p>
+<iframe src="http://player.vimeo.com/video/40780990?title=0&amp;byline=0&amp;portrait=0" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/40780990">Drawbridge.js</a> from <a href="http://vimeo.com/user11381617">Liam Kaufman</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+</p>
+
+<p>
+While I built Drawbridge.js to scratch my own itch, I hope others will find it useful as well. Once I refine it further I will most certainly start to use it in my own projects. If you’re interested in Drawbridge 1) watch the project on Github and 2) try and get it working on your toy Express apps. I welcome feedback on both the architecture of Drawbridge and its security.
+</p>
+
+<p>
+<a class="github" href="https://github.com/liamks/Drawbridge.js"><span></span>Drawbridge.js on Github</a>
+</p>
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script>
+  window.disqus_config = function () {
+    this.page.identifier = '\/blog\/2012\/04\/21\/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis\/';
+    
+    this.page.url = '\/blog\/2012\/04\/21\/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis\/';
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "liamkaufman" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    
+    document.addEventListener('themeChanged', function (e) { 
+        if (document.readyState == 'complete') {
+          DISQUS.reset({ reload: true, config: disqus_config });
+        }
+    });
+</script>
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
     </div>
 
     <footer class="footer">
@@ -152,7 +272,7 @@ Given the authentication options for Express.js I wanted to create a module that
 
   
   
-  <script src="/js/coder.js"></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   

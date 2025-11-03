@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <title>Liam Kaufman</title>
+<head>
+  <title>
+  How AngularJS Made Me a Better Node.js Developer · Liam Kaufman
+</title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
@@ -22,7 +24,7 @@
   <meta name="twitter:title" content="How AngularJS Made Me a Better Node.js Developer">
   <meta name="twitter:description" content="Over the past 6 years I’ve used Ruby on Rails, Backbone.js, Node and AngularJS. RoR reinforced my knowledge of Model View Controller (MVC) while Backbone.js did the same for my knowledge of Publish/Subscribe. Like many who made the switch to Node, my first instinct was to try and apply MVC to my Node.js apps - however, it felt unnatural. Taking a &#34;class&#34;-based approach, using CoffeeScript, didn’t feel entirely natural either.">
 
-<meta property="og:url" content="http://localhost:1313/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/">
+<meta property="og:url" content="http://www.example.com/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/">
   <meta property="og:site_name" content="Liam Kaufman">
   <meta property="og:title" content="How AngularJS Made Me a Better Node.js Developer">
   <meta property="og:description" content="Over the past 6 years I’ve used Ruby on Rails, Backbone.js, Node and AngularJS. RoR reinforced my knowledge of Model View Controller (MVC) while Backbone.js did the same for my knowledge of Publish/Subscribe. Like many who made the switch to Node, my first instinct was to try and apply MVC to my Node.js apps - however, it felt unnatural. Taking a &#34;class&#34;-based approach, using CoffeeScript, didn’t feel entirely natural either.">
@@ -35,7 +37,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:1313/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/">
+<link rel="canonical" href="http://www.example.com/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -45,7 +47,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -95,7 +97,7 @@
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://localhost:1313/">
+    <a class="navigation-title" href="http://www.example.com/">
       Liam Kaufman
     </a>
     
@@ -125,6 +127,223 @@
 
     <div class="content">
       
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://www.example.com/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/">
+              How AngularJS Made Me a Better Node.js Developer
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2013-08-06T00:00:00Z">
+                August 6, 2013
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        
+<p>
+	Over the past 6 years I’ve used Ruby on Rails, Backbone.js, Node and AngularJS.  RoR reinforced my knowledge of Model View Controller (MVC) while Backbone.js did the same for my knowledge of Publish/Subscribe. Like many who made the switch to Node, my first instinct was to try and apply MVC to my Node.js apps - however, it felt unnatural. Taking a "class"-based approach, using CoffeeScript, didn’t feel entirely natural either. 
+</p>
+<p>
+  While I enjoyed developing in JavaScript, I always felt I was missing something - that is until I started developing with AngularJS. AngularJS uses both dependency injection and promises extensively, both of which have greatly improved my code. In this article, I'll focus on dependency injection, and discuss promises in my next article.
+</p>
+<h2>Dependency Injection</h2>
+<blockquote cite="http://angularjs.org">
+	"Dependency injection is also a core to AngularJS. This means that any component which does not fit your needs can easily be replaced." - angularjs.org
+</blockquote>
+<p>
+	AngularJS doesn’t just pay lip service to dependency injection, it’s a design pattern that it uses extensively, and builders of AngularJS apps use as well. Wikipedia defines dependency injection thusly:
+</p>
+<blockquote cite="http://angularjs.org">
+	"Dependency injection is a software design pattern that allows the removal of hard-coded dependencies and makes it possible to change them, whether at run-time or compile-time."
+</blockquote>
+<p>
+	So, how has dependency injection (DI) improved my Node.js apps? Traditionally I might write a task queue like so:
+</p>
+
+```javascript makeThumbnail.js
+var db = require('./database.js');
+
+module.exports = {
+  start : function(input){
+    // makeThumbnail
+    // save timestamp
+    db.save({...});
+  }
+};
+```
+
+```javascript uploadToS3.js
+var db = require('./database.js');
+
+module.exports = {
+  start : function(input){
+    // upload thumb
+    // perhaps save bucket name
+    db.save({...});
+  }
+};
+```
+<p>
+	Using dependency injection I’d change that to this:
+</p>
+
+
+```javascript makeThumbnail.js
+module.exports = {
+  start : function(input, db){
+    // makeThumbnail
+    // save timestamp
+    db.save({...});
+  }
+};
+```
+
+```javascript uploadToS3.js
+module.exports = {
+  start : function(input, db){
+    // upload thumb
+    // perhaps save bucket name
+    db.save({...});
+  }
+};
+```
+
+```javascript taskRunner.js
+var db = require('./database.js'),
+    makeThumbnail = require('./tasks/makeThumbnail'),
+    uploadToS3 = require('./tasks/uploadToS3'),
+    taskToRun = process.argv[2],
+    taskRunner;
+
+taskRunner = function(task){
+  task.start(process.argv, db);
+};
+
+if(taskToRun === 'uploadToS3'){
+  taskRunner(uploadToS3);
+}else{
+  taskRunner(makeThumbnail);
+}
+```
+<p>
+	While the DI example above requires more code than the original, it makes testing easier and I'd argue better. It becomes trivial to test each unit in isolation of other units of code. With the first approach, each unit test would require database calls. With the second approach, we can inject a mock database object like so:
+</p>
+
+```javascript makeThumbnail.test.js
+var makeThumbnail = require('makeThumbnail');
+
+describe('Make Thumbnail', function(){
+  var database = {};
+
+  it('should make a thumbnail, and call db.save', function(done){
+    var input = {
+      imageId : 1
+    };
+
+    database.save = function(obj){
+      assert.equal(obj.id, input.imageId);
+      done();
+    }
+
+    makeThumbnail(input, database);
+  });
+});
+```
+<p>
+	This speeds testing up significantly and ensures that if the unit tests fails it's not failing because of issues with the database code. Ultimately, this makes localizing bugs much quicker. In other words we can test just the creation of thumbnails, and not our database (which we'd do separately).
+</p>
+<p>
+	DI forces one to think more rigorously about how code will be divided into modules, and what modules will be injected into other modules. This requires more diligence upfront, but leads to greater flexibility down the line. For instance, the database object is only being <code>required()</code> and injected in a single spot in the code, making it much easier to swap the database from say MySQL to Postgresql.
+</p>
+
+<h2>Why not use use require?</h2>
+<p>
+  On a post <a href="http://www.alexrothenberg.com/2013/02/11/the-magic-behind-angularjs-dependency-injection.html">detailing the magic behind AngularJS' DI</a>, tjholowaychuk (of Express.js, Jade and Mocha fame) asks: "why not just require() what you want? seems odd to me"?
+ </p>
+<p>
+  <img src="/images/why-not-use-require.png">
+</p>
+
+<p>
+  Despite asking 6 months ago, no one has replied, leaving readers pondering why. As the example above shows, requiring dependencies at the top of each file makes mocking more difficult. One could write a wrapper around each dependency, and serve it normally for development/production and serve the mocked version for test ENV, but at that point why not consider DI?
+</p>
+<h2>Conclusion</h2>
+<p>
+	As learning new programming languages makes us better developers so does learning new frameworks. Learning a new framework helps us learn, and reinforce our knowledge of design patterns. Qes, on programmers.stackexchange.com, sums up his experiences with DI:
+</p>
+<a href="http://programmers.stackexchange.com/questions/19203/what-are-the-benefits-of-using-dependency-injection-and-ioc-containers"><img src="/images/stackexchange_dependency_injection.png" alt="A quote about the importance of dependency injection."></a>
+
+<h2>Extra Reading</h2>
+<ol>
+  <li><a href="http://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection (Wikipedia)</a></li>
+  <li><a href="http://www.alexrothenberg.com/2013/02/11/the-magic-behind-angularjs-dependency-injection.html">How DI In AngularJS Works</a></li>
+  <li><a href="http://www.jacopretorius.net/2013/07/angularjs-best-practices.html">AngularJS Best Practices [questions the necessity of DI]</a></li>
+</ol>
+
+
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script>
+  window.disqus_config = function () {
+    this.page.identifier = '\/blog\/2013\/08\/06\/how-angularjs-made-me-a-better-nodejs-developer\/';
+    
+    this.page.url = '\/blog\/2013\/08\/06\/how-angularjs-made-me-a-better-nodejs-developer\/';
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "liamkaufman" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    
+    document.addEventListener('themeChanged', function (e) { 
+        if (document.readyState == 'complete') {
+          DISQUS.reset({ reload: true, config: disqus_config });
+        }
+    });
+</script>
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
     </div>
 
     <footer class="footer">
@@ -148,7 +367,7 @@
 
   
   
-  <script src="/js/coder.js"></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   
