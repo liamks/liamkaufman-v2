@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  pyItunes, a Python iTunes Library Parser · Liam Kaufman
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liam Kaufman">
+<meta name="description" content="
+	In an effort to add some personality to this site I thought I&#39;d list my favourite songs. iTunes provides
+	a mechanism for users to rate songs, by giving a song 0 to 5 stars. After years of listening to music, and rating it,
+	I have a large collection of rated songs. Manually copying and pasting each song into an HTML file seemed
+	 inefficient and time consuming, enter Python.
+
+
+
+	In an effort to learn Python, and parse my iTunes library, I created pyItunes, a Python module. pyItunes includes three classes that can parse the &#34;iTunes Music Library.xml&#34; file and convert it into list of Song objects. I decided to roll my own micro-xml parser that can only parse the iTunes xml file. Although, reinventing the wheel, especially an XML parser, is likely a horrible idea I felt it would be a good learning experience. In future versions I may swap an existing XML parser that is much faster and more efficient than the one I created.
+">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="pyItunes, a Python iTunes Library Parser">
+  <meta name="twitter:description" content="In an effort to add some personality to this site I thought I&#39;d list my favourite songs. iTunes provides a mechanism for users to rate songs, by giving a song 0 to 5 stars. After years of listening to music, and rating it, I have a large collection of rated songs. Manually copying and pasting each song into an HTML file seemed inefficient and time consuming, enter Python. In an effort to learn Python, and parse my iTunes library, I created pyItunes, a Python module. pyItunes includes three classes that can parse the &#34;iTunes Music Library.xml&#34; file and convert it into list of Song objects. I decided to roll my own micro-xml parser that can only parse the iTunes xml file. Although, reinventing the wheel, especially an XML parser, is likely a horrible idea I felt it would be a good learning experience. In future versions I may swap an existing XML parser that is much faster and more efficient than the one I created.">
+
+<meta property="og:url" content="http://localhost:1313/blog/2009/03/18/pyitunes-a-python-itunes-library-parser/">
+  <meta property="og:site_name" content="Liam Kaufman">
+  <meta property="og:title" content="pyItunes, a Python iTunes Library Parser">
+  <meta property="og:description" content="In an effort to add some personality to this site I thought I&#39;d list my favourite songs. iTunes provides a mechanism for users to rate songs, by giving a song 0 to 5 stars. After years of listening to music, and rating it, I have a large collection of rated songs. Manually copying and pasting each song into an HTML file seemed inefficient and time consuming, enter Python. In an effort to learn Python, and parse my iTunes library, I created pyItunes, a Python module. pyItunes includes three classes that can parse the &#34;iTunes Music Library.xml&#34; file and convert it into list of Song objects. I decided to roll my own micro-xml parser that can only parse the iTunes xml file. Although, reinventing the wheel, especially an XML parser, is likely a horrible idea I felt it would be a good learning experience. In future versions I may swap an existing XML parser that is much faster and more efficient than the one I created.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2009-03-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2009-03-18T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/blog/2009/03/18/pyitunes-a-python-itunes-library-parser/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liam Kaufman
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/blog/2009/03/18/pyitunes-a-python-itunes-library-parser/">
+          pyItunes, a Python iTunes Library Parser
+        </a>
+      </h1>
+    </header>
+
+    
+<p>
+	In an effort to add some personality to this site I thought I'd list my favourite songs. iTunes provides
+	a mechanism for users to rate songs, by giving a song 0 to 5 stars. After years of listening to music, and rating it,
+	I have a large collection of rated songs. Manually copying and pasting each song into an HTML file seemed
+	 inefficient and time consuming, enter Python.
+</p>
+
+<p>
+	In an effort to learn Python, and parse my iTunes library, I created pyItunes, a Python module. pyItunes includes three classes that can parse the "iTunes Music Library.xml" file and convert it into list of Song objects. I decided to roll my own micro-xml parser that can only parse the iTunes xml file. Although, reinventing the wheel, especially an XML parser, is likely a horrible idea I felt it would be a good learning experience. In future versions I may swap an existing XML parser that is much faster and more efficient than the one I created.
+</p>
+
+<p>
+	<h4>Download pyItunes</h4>
+	<script src="http://gist.github.com/80911.js"></script>
+</p>
+
+<p>
+	<h4>pyItunes Usage</h4>
+	<script src="http://gist.github.com/79668.js"></script>
+
+</p>
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2025
+     Liam Kaufman 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

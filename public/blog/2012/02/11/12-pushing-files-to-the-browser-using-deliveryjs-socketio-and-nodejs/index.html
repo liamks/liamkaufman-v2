@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Pushing Files to the Browser Using Delivery.js, Socket.IO and Node.js · Liam Kaufman
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liam Kaufman">
+<meta name="description" content="
+Recently I&#39;ve been working with both the HTML 5 File API and Socket.IO and it occured to me that those technologies could be used to send, and push, files between the client and server. Immediately I set about making delivery.js, a simple node module that makes it extremely easy to send and push files between the client and the server via Socket.IO. 
+
+
+I should note that this is my first node module, so constructive critism and feedback are welcome and encouraged! 
+">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Pushing Files to the Browser Using Delivery.js, Socket.IO and Node.js">
+  <meta name="twitter:description" content="Recently I&#39;ve been working with both the HTML 5 File API and Socket.IO and it occured to me that those technologies could be used to send, and push, files between the client and server. Immediately I set about making delivery.js, a simple node module that makes it extremely easy to send and push files between the client and the server via Socket.IO. I should note that this is my first node module, so constructive critism and feedback are welcome and encouraged!">
+
+<meta property="og:url" content="http://localhost:1313/blog/2012/02/11/12-pushing-files-to-the-browser-using-deliveryjs-socketio-and-nodejs/">
+  <meta property="og:site_name" content="Liam Kaufman">
+  <meta property="og:title" content="Pushing Files to the Browser Using Delivery.js, Socket.IO and Node.js">
+  <meta property="og:description" content="Recently I&#39;ve been working with both the HTML 5 File API and Socket.IO and it occured to me that those technologies could be used to send, and push, files between the client and server. Immediately I set about making delivery.js, a simple node module that makes it extremely easy to send and push files between the client and the server via Socket.IO. I should note that this is my first node module, so constructive critism and feedback are welcome and encouraged!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2012-02-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2012-02-11T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/blog/2012/02/11/12-pushing-files-to-the-browser-using-deliveryjs-socketio-and-nodejs/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liam Kaufman
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/blog/2012/02/11/12-pushing-files-to-the-browser-using-deliveryjs-socketio-and-nodejs/">
+          Pushing Files to the Browser Using Delivery.js, Socket.IO and Node.js
+        </a>
+      </h1>
+    </header>
+
+    
+<p>
+Recently I've been working with both the HTML 5 File API and Socket.IO and it occured to me that those technologies could be used to send, and push, files between the client and server. Immediately I set about making delivery.js, a simple node module that makes it extremely easy to send and push files between the client and the server via Socket.IO. 
+</p>
+<p>
+I should note that this is my first node module, so constructive critism and feedback are welcome and encouraged! 
+</p>
+
+<h2> Example:  Pushing An Image To The Client</h2>
+<p>
+<a class="github" href="https://github.com/liamks/Delivery.js"><span></span>Delivery.js on Github</a>
+</p>
+<p>
+In the following example, once a client connects to the server an image will be pushed to the client. When the client receives the image, the image's data URL ("data:image/gif;base64,R0lGODlhEAAOALMAAOazT...") is assigned to the src attribute of an img element.
+</p>
+
+```javascript Client
+$(function(){
+  var socket = io.connect('http://0.0.0.0:5001');
+
+  socket.on('connect', function(){
+    var delivery = new Delivery(socket);
+
+    delivery.on('receive.start',function(fileUID){
+      console.log('receiving a file!');
+    });
+
+    delivery.on('receive.success',function(file){
+      if (file.isImage()) {
+        $('img').attr('src', file.dataURL());
+      };
+    });
+  });
+});
+```
+
+```javascript Server
+var io  = require('socket.io').listen(5001),
+    dl  = require('delivery');
+
+io.sockets.on('connection', function(socket){
+  var delivery = dl.listen(socket);
+  delivery.on('delivery.connect',function(delivery){
+
+    delivery.send({
+      name: 'sample-image.jpg',
+      path : './sample-image.jpg'
+    });
+
+    delivery.on('send.success',function(file){
+      console.log('File successfully sent to client!');
+    });
+
+  });
+});
+```
+
+<h2> Advantages </h2>
+
+<p>
+While delivery.js is more of an experiment, there could be some advantages to using Web Sockets to transfer files. Once a Web Socket connection is established  messages (frames) sent between the client and server contain only 2 additional bytes of overhead. In contrast, a traditional POST request, and response, may have headers totaling <a href="http://websocket.org/quantum.html">871 bytes</a>. This could be a significant addition if many files are being sent, and would be even more significant if files are being divided into batches before being sent to the server. When pushing files to the client, the overhead of traditional polling methods provides an even starker contrast to Web Sockets.
+</p>
+
+<h2> Disadvantages </h2>
+
+<p>
+The most apparent disadvantage would be the fact that it bipasses traditional caching methods. Instead of caching based on a file's URL, caching would be based on the content of the Web Socket's message. One possibility would be to cache a base64, or text, version of the file within Redis for fast, in memory, access. 
+</p>
+
+<h2> Future </h2>
+<p>
+With <a href="http://gildas-lormeau.github.com/zip.js/">zip.js</a> files could be deflated, or inflated, within the browser. In-browser file zipping could have a positive impact on transfer speeds. To check the integrity of the unzipped file an md5 checksum could be generated client-side, using Paul Johnston's <a href="http://pajhome.org.uk/crypt/md5/">JavaScript MD5</a> implementation, and then passed along with the zipped file.
+</p>
+
+<p>
+For more documentation and examples see Delivery.js on Github:<br />
+<a class="github" href="https://github.com/liamks/Delivery.js"><span></span>Delivery.js on Github</a>
+</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2025
+     Liam Kaufman 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

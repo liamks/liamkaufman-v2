@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Using AngularJS Promises · Liam Kaufman
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liam Kaufman">
+<meta name="description" content="
+  In my previous article I discussed the benefits of using dependency injection to make code more testable and modular. In this article I’ll focus on using promises within an AngularJS application. This article assume some prior knowledge of promises (a good intro on promises and AngularJS&#39; official documentation).
+
+
+
+  Promises can be used to unnest asynchronous functions and allows one to chain multiple functions together - increasing readability and making individual functions, within the chain, more reusable.
+">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Using AngularJS Promises">
+  <meta name="twitter:description" content="In my previous article I discussed the benefits of using dependency injection to make code more testable and modular. In this article I’ll focus on using promises within an AngularJS application. This article assume some prior knowledge of promises (a good intro on promises and AngularJS&#39; official documentation). Promises can be used to unnest asynchronous functions and allows one to chain multiple functions together - increasing readability and making individual functions, within the chain, more reusable.">
+
+<meta property="og:url" content="http://localhost:1313/blog/2013/09/09/using-angularjs-promises/">
+  <meta property="og:site_name" content="Liam Kaufman">
+  <meta property="og:title" content="Using AngularJS Promises">
+  <meta property="og:description" content="In my previous article I discussed the benefits of using dependency injection to make code more testable and modular. In this article I’ll focus on using promises within an AngularJS application. This article assume some prior knowledge of promises (a good intro on promises and AngularJS&#39; official documentation). Promises can be used to unnest asynchronous functions and allows one to chain multiple functions together - increasing readability and making individual functions, within the chain, more reusable.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2013-09-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2013-09-09T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/blog/2013/09/09/using-angularjs-promises/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liam Kaufman
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/blog/2013/09/09/using-angularjs-promises/">
+          Using AngularJS Promises
+        </a>
+      </h1>
+    </header>
+
+    
+<p>
+  In my previous article I discussed the <a href="/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/">benefits of using dependency injection</a> to make code more testable and modular. In this article I’ll focus on using promises within an AngularJS application. This article assume some prior knowledge of promises (<a href="http://wildermuth.com/2013/8/3/JavaScript_Promises">a good intro on promises</a> and <a href="http://docs.angularjs.org/api/ng.$q">AngularJS' official documentation</a>).
+</p>
+
+<p>
+  Promises can be used to unnest asynchronous functions and allows one to chain multiple functions together - increasing readability and making individual functions, within the chain, more reusable.
+</p>
+
+```javascript Standard Callbacks (no promises)
+function fetchData(id, cb){
+  getDataFromServer(id, function(err, result){
+    if(err){
+      cb(err, null);
+    }else{
+      transformData(result, function(err, transformedResult){
+        if(err){
+          cb(err, null);
+        }else{
+          saveToIndexDB(result, function(err, savedData){
+            cb(err, savedData);
+          });
+        }
+      });
+    }
+  });
+}
+```
+
+<p>
+  Once <code>getDataFromServer()</code>, <code>transformData()</code> and <code>saveToIndexDB()</code> are converted to returning promises we can refactor the above code to:
+</p>
+
+```javascript With Promises
+function fetchData(id){
+  return getDataFromServer(id)
+          .then(transformData)
+          .then(saveToIndexDB);
+}
+```
+<p>
+  In addition to increasing readability promises can help with error handling, progress updates, and AngularJS templates.
+</p>
+
+<h2>Handling Errors</h2>
+<p>
+  If <code>fetchData</code> is called and an exception is raised in <code>transformData()</code> or <code>saveToIndexDB()</code>, it will trigger the final error callback.
+</p>
+```javascript
+
+fetchData(1)
+  .then(function(result){
+
+  }, function(error){
+    // exceptions in transformData, or saveToIndexDB
+    // will result in this error callback being called.
+  });
+```
+
+<p>
+   Unfortunately, if an exception is raised in <code>getDataFromServer()</code> it will not trigger the final error callback. This happens because <code>transformData()</code> and <code>saveToIndexDB()</code> are called within the context of <code>.then()</code>, which uses try-catch, and automatically calls <code>.reject()</code> on an exception. To bring this behaviour to the first function we can introduce a try-catch block like:
+</p>
+
+```javascript getDataFromServer()
+function getDataFromServer(id){
+  var deferred = $q.defer();
+
+  try{
+    // asynchronous function, which calls
+    // deferred.resolve() on sucess
+  }catch(e){
+    deferred.reject(e);
+  }
+
+  return deferred.promise;
+}
+```
+<p>
+  While adding try-catch made <code>getDataFromServer()</code> less elegant, it makes it more robust and easier to use as the first in a chain of promises.
+</p>
+
+<h2>Using Notify for Progress Updates</h2>
+
+<p>
+  A promise can only be resolved, or rejected, once. To provide progress updates, which may happen zero or more times, a promise also includes a notify callback (introduced in AngularJS 1.2+). Notify could be used to provide incremental progress updates on a long running asynchronous task. Below is an example of a long running function, <code>processLotsOfData()</code>, that uses <code>notify</code> to provide progress updates.
+</p>
+ 
+```javascript
+function processLotsOfData(data){
+  var output = [],
+      deferred = $q.defer(),
+      percentComplete = 0;
+
+  for(var i = 0; i < data.length; i++){
+    output.push(processDataItem(data[i]));
+    percentComplete = (i+1)/data.length * 100;
+    deferred.notify(percentComplete);
+  }
+
+  deferred.resolve(output);
+
+  return deferred.promise;
+};
+
+
+processLotsOfData(data)
+  .then(function(result){
+    // success
+  }, function(error){
+    // error
+  }, function(percentComplete){
+    $scope.progress = percentComplete;
+  });
+```
+
+<p>
+  Using the notify function, we can make many updates to the $scope's progress variable before processLotsOfData is resolved (finished), making notify ideal for progress bars.
+</p>
+
+<p>
+  Unfortunately, using notify in a chain or promises is cumbersome since calls to notify do not bubble up. Every function in the chain would have to manually bubble up notifications, making code a little more difficult to read.
+</p>
+
+<h2>Templates</h2>
+
+<p>
+  <span style="text-decoration: line-through;">AngularJS templates understand promises and delays their rendering until they're resolved, or rejected</span>. AngularJS templates no longer resolve promises - they must be resolved in the controller
+  before they're assigned to the scope. For instance let's say our template looks like:
+</p>
+
+{% codeblock %} {% raw %}
+<p>{{bio}}</p>
+{% endraw %} {% endcodeblock %}
+
+<p>
+  We could do the following in our controller:
+</p>
+
+```javascript
+function getBio(){
+  var deferred = $q.defer();
+  // async call, resolved after ajax request completes
+  return deferred.promise; 
+};
+
+getBio().then(function(bio){
+  $scope.bio = bio;
+});
+```
+
+<p>
+  The view renders normally, and when the promise is resolved AngularJS automatically updates the view to include the value resolved in getBio.
+</p>
+
+<h2>Limitations of Promises in AngularJS</h2>
+<p>
+  When a promise is resolved asynchronously, “in a future turn of the event loop”, the .resolve() function must be wrapped in a promise. In the contrived example below, a user would click a button triggering <code>goodbye()</code>, which should update the <code>$scope</code>'s greeting attribute. 
+</p>
+
+
+```javascript
+app.controller('AppCtrl', 
+[   '$scope',
+    '$q',
+    function AppCtrl($scope, $q){
+      $scope.greeting = "hello";
+        
+       var updateGreeting = function(message){
+          var deferred = $q.defer();
+          
+          setTimeout(function(){
+              deferred.resolve(message);
+          }, 5);
+          
+          return deferred.promise;
+       };
+      $scope.goodbye = function(){
+          $scope.greeting = updateGreeting('goodbye');
+      }
+    }
+]);
+
+```
+<p>
+  Unfortunately, it doesn't work as expected, since the asynchronous event works outside of AngularJS' event loop. The fix for this (besides using AngularJS' setTimemout function), is to wrap the deferred's resolve in <code>$scope.$apply</code> to trigger the digest cycle and update the <code>$scope</code> accordingly:
+</p>
+
+```javascript
+setTimeout(function(){
+  $scope.$apply(function(){
+    deferred.resolve(message);
+  });
+}, 5)
+```
+
+<p>Jim Hoskins goes into more detail on using <code>$apply</code>: <a href="http://jimhoskins.com/2012/12/17/angularjs-and-apply.html">http://jimhoskins.com/2012/12/17/angularjs-and-apply.html</a></p>
+
+<h2>Conclusions</h2>
+<p>
+  Using promises is an important part of writing an AngularJS app idiomatically and should help make your code more readable. Understanding their shortcomings, and their strengths make them much easier to work with.
+</p>
+
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2025
+     Liam Kaufman 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

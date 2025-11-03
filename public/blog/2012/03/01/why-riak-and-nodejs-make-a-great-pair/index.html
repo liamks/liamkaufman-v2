@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Why Riak and Node.js Make a Great Pair · Liam Kaufman
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liam Kaufman">
+<meta name="description" content="
+In the last few years there has been a proliferation of noSQL databases. Searching on Google for site:news.ycombinator.com nosql yields over 2,500 hits, many of which include include posts asking when you&#39;d want to use a noSQL database. If you&#39;re used to a relational database it might seem like an unnecessary burden to learn another database paradigm, but there&#39;s one open source noSQL database that I think is not only worth the burden, but is a perfect fit for Node.js development: Riak (pronounced &#34;REE-ack&#34;). 
+">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Why Riak and Node.js Make a Great Pair">
+  <meta name="twitter:description" content="In the last few years there has been a proliferation of noSQL databases. Searching on Google for site:news.ycombinator.com nosql yields over 2,500 hits, many of which include include posts asking when you&#39;d want to use a noSQL database. If you&#39;re used to a relational database it might seem like an unnecessary burden to learn another database paradigm, but there&#39;s one open source noSQL database that I think is not only worth the burden, but is a perfect fit for Node.js development: Riak (pronounced &#34;REE-ack&#34;).">
+
+<meta property="og:url" content="http://localhost:1313/blog/2012/03/01/why-riak-and-nodejs-make-a-great-pair/">
+  <meta property="og:site_name" content="Liam Kaufman">
+  <meta property="og:title" content="Why Riak and Node.js Make a Great Pair">
+  <meta property="og:description" content="In the last few years there has been a proliferation of noSQL databases. Searching on Google for site:news.ycombinator.com nosql yields over 2,500 hits, many of which include include posts asking when you&#39;d want to use a noSQL database. If you&#39;re used to a relational database it might seem like an unnecessary burden to learn another database paradigm, but there&#39;s one open source noSQL database that I think is not only worth the burden, but is a perfect fit for Node.js development: Riak (pronounced &#34;REE-ack&#34;).">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2012-03-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2012-03-01T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/blog/2012/03/01/why-riak-and-nodejs-make-a-great-pair/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liam Kaufman
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/blog/2012/03/01/why-riak-and-nodejs-make-a-great-pair/">
+          Why Riak and Node.js Make a Great Pair
+        </a>
+      </h1>
+    </header>
+
+    
+<p>
+In the last few years there has been a proliferation of noSQL databases. Searching on Google for <code>site:news.ycombinator.com nosql</code> yields over 2,500 hits, many of which include include posts asking when you'd want to use a noSQL database. If you're used to a relational database it might seem like an unnecessary burden to learn another database paradigm, but there's one open source noSQL database that I think is not only worth the burden, but is a perfect fit for Node.js development: <a href=”http://wiki.basho.com/What-is-Riak%3F.html”>Riak (pronounced "REE-ack")</a>. 
+</p>
+
+<h2>Why is Riak a Good Fit with JavaScript and Node.js?</h2>
+
+<p>
+<a href="http://riakjs.org/">Riak-js</a> makes storing JavaScript objects easy. There is no need to <code>JSON.stringify()</code> a JavaScript object when saving it, or applying <code>JSON.parse()</code> when retrieving. 
+</p>
+
+```javascript Riak and Node.js Basics
+var db = require('riak-js').getClient();
+var post = {id: 17, 
+            date: new Date(),
+            title: 'a blog post', 
+            body: 'A blog post about Riak'};
+
+db.save('posts', post.id, post);
+db.get('posts', 17, function(err, data, meta){
+    console.log(data);
+});
+/* prints
+{ id: 17,
+  date: '2012-02-29T18:26:44.400Z',
+  title: 'a blog post',
+  body: 'A blog post about Riak' }
+*/
+```
+
+<p>
+In the above example, a riak-js client is created and a post object is created. The post object is saved into the 'posts' bucket, with its id as its key. To retrieve the post, the bucket and key are referenced. 
+</p>
+
+<p>
+Using JavaScript in the client, and the server are nice, and being able to easily save JavaScript objects is even better. Not having to switch between languages would certainly reduce annoying syntactic problems. This would also allow you to write the entire stack in JavaScript, CoffeeScript or ClojureScript, giving you several programming paradigms to choose from.  
+</p>
+
+<p>
+If you decided to use <A href="http://andyet.net/blog/2011/feb/15/re-using-backbonejs-models-on-the-server-with-node/">Backbone.js on the server</a>, calling <code>toJSON()</code> on a Backbone model would allow you to easily store the model in the Riak. 
+</p>
+
+<h2>Why Riak?</h2>
+
+<p>
+At this point you might be wondering why you’d want to use Riak when CouchDB also has a JavaScript interface and can do some of the above. As Damien Katz, the creator of CouchDB has pointed out, <a href="http://damienkatz.net/2012/01/why_couchbase.html">CouchDB is slow and can't "scale-out on it's own"</a>.  In contrast, Riak was built for replication and scaling out. In fact, people at Basho, the company behind Riak, <a href="http://lists.basho.com/pipermail/riak-users_lists.basho.com/2010-April/000876.html">indicate that adding new nodes actually increases throughput</a>.
+</p>
+
+<h2>Additional Features of Riak</h2>
+<p>
+Saving JavaScript objects and easy scaling are both good fits with node.js but Riak has some additional features, such as buckets and links, that make retrieval convenient. With buckets the following functions become possible:
+</p>
+
+```javascript Riak Buckets
+// Get all the posts within the posts bucket
+db.getAll('posts');
+
+// Get all the posts with the title ===  'a blog post' 
+db.getAlll('posts', { where: {title: 'a blog post' }});
+
+// Get the number of posts
+db.count('posts');
+```
+
+<p>
+Another interesting property of Riak, is it’s concepts of links. A link establishes a "one-way relationships between objects in Riak".  For instance, say we wanted to link similar posts the following would do:
+</p>
+
+```javascript Riak Links
+var aNewPost = {id: 18, 
+                date: new Date(),
+                title: 'a second blog post', 
+                body: 'blog post about Riak part 2'};
+
+// Save the second post, with a link to the first post
+db.save('posts', aNewPost.id, aNewPost, 
+  { links: [ {bucket: 'posts', 'key': 17 } ]});
+
+db.walk('posts', '18', [{bucket:'posts',tag:'_'}]);
+// db.walk, traverses object 18's links, 
+// which happens to be post 17, and returns them.
+```
+
+<h2>Conclusions</h2>
+
+<p>
+While the above assessment is pretty rosey, Riak shouldn’t be the only database in your toolbox. Redis’ pub/sub and sorted sets are unmatched in Riak. If you’re running <a href="http://labs.linkfluence.net/nosql/2011/03/07/moving_from_couchdb_to_riak.html">map/reduce over large datasets, you’re likely better off using Hadoop</a>. Conversely if your already well-versed in SQL, and your data is relational, using Postgresql is probably a better fit. Despite those caveats being able to easily scale your database, and save JavaScript objects, is a pretty compelling reason to use Riak with Node.js
+</p>
+
+<h2>Further Riak and Node.js Reading</h2>
+<ul>
+<li><a href="http://www.slideshare.net/seancribbs/riak-with-nodejs">Riak with Node.js</a></li>
+<li><a href="http://blogs.digitar.com/jjww/2011/03/riak-vs-couchdb-for-storing-100000-coupons/">Riak vs Couchdb for storing 100000 Coupons</a></li>
+<li><a href="http://labs.linkfluence.net/nosql/2011/03/07/moving_from_couchdb_to_riak.html">Moving from Couchdb to Riak</a></li>
+<li><a href="http://siculars.posterous.com/paginating-with-riak">Pagination with Riak</a></li>
+</ul>
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2025
+     Liam Kaufman 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

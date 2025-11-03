@@ -1,0 +1,6 @@
+{{ define "main" }}
+  {{ .Render "content" }}
+  {{ if .Params.legacy_comments }}
+    {{ partial "legacy-comments.html" . }}
+  {{ end }}
+{{ end }}

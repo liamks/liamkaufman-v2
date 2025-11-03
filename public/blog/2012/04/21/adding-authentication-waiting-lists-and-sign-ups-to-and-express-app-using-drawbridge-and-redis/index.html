@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Adding Authentication, Waiting Lists and Sign Ups to an Express App Using Drawbridge.js and Redis · Liam Kaufman
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liam Kaufman">
+<meta name="description" content="
+There are several popular modules for adding password-based user authentication to an Express.js app. Unfortunately, they require writing lots of code to get started. I prefer the approach that authentication libraries like Devise take: they generate code and views, and you’re free to modify, or delete, what’s created. 
+
+
+
+Given the authentication options for Express.js I wanted to create a module that would make adding user authentication quick and easy. Moreover, I also wanted developers to be free to edit and modify the generated views. In addition to authentication I wanted the module to handle sign ups (the type you see on a just-launched startup’s page) and to handle waiting lists and invitations. Based on the module&#39;s functionality I&#39;ve decided to call it Drawbridge.js.
+">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Adding Authentication, Waiting Lists and Sign Ups to an Express App Using Drawbridge.js and Redis">
+  <meta name="twitter:description" content="There are several popular modules for adding password-based user authentication to an Express.js app. Unfortunately, they require writing lots of code to get started. I prefer the approach that authentication libraries like Devise take: they generate code and views, and you’re free to modify, or delete, what’s created. Given the authentication options for Express.js I wanted to create a module that would make adding user authentication quick and easy. Moreover, I also wanted developers to be free to edit and modify the generated views. In addition to authentication I wanted the module to handle sign ups (the type you see on a just-launched startup’s page) and to handle waiting lists and invitations. Based on the module&#39;s functionality I&#39;ve decided to call it Drawbridge.js.">
+
+<meta property="og:url" content="http://localhost:1313/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/">
+  <meta property="og:site_name" content="Liam Kaufman">
+  <meta property="og:title" content="Adding Authentication, Waiting Lists and Sign Ups to an Express App Using Drawbridge.js and Redis">
+  <meta property="og:description" content="There are several popular modules for adding password-based user authentication to an Express.js app. Unfortunately, they require writing lots of code to get started. I prefer the approach that authentication libraries like Devise take: they generate code and views, and you’re free to modify, or delete, what’s created. Given the authentication options for Express.js I wanted to create a module that would make adding user authentication quick and easy. Moreover, I also wanted developers to be free to edit and modify the generated views. In addition to authentication I wanted the module to handle sign ups (the type you see on a just-launched startup’s page) and to handle waiting lists and invitations. Based on the module&#39;s functionality I&#39;ve decided to call it Drawbridge.js.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2012-04-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2012-04-21T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liam Kaufman
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/">
+          Adding Authentication, Waiting Lists and Sign Ups to an Express App Using Drawbridge.js and Redis
+        </a>
+      </h1>
+    </header>
+
+    
+<p>
+There are several popular modules for adding password-based user authentication to an Express.js app. Unfortunately, they require writing lots of code to get started. I prefer the approach that authentication libraries like Devise take: they generate code and views, and you’re free to modify, or delete, what’s created. 
+</p>
+
+<p>
+Given the authentication options for Express.js I wanted to create a module that would make adding user authentication quick and easy. Moreover, I also wanted developers to be free to edit and modify the generated views. In addition to authentication I wanted the module to handle sign ups (the type you see on a just-launched startup’s page) and to handle waiting lists and invitations. Based on the module's functionality I've decided to call it Drawbridge.js.
+</p>
+
+<h2>User Authentication with Drawbridge.js</h2>
+<p>
+Drawbridge.js uses Redis to persists its data, but it’s possible for developers to create other database adapters for Drawbridge (pull-requests accepted). I chose Redis because its ability to pipeline multiple commands reducing round trips between the server and the database. The atomic nature of pipelined commands obviates a lot of complex callbacks and makes the resulting code much easier to understand. Overall Redis is easy to use, easy to understand and fast - great features for an authentication module. 
+</p>
+<p>
+To send email, Drawbridge uses either nodemailer, or the postmark modules. I included the <a href="https://postmarkapp.com">Postmark</a> option because I'm currently using it and I like it. However, developers are free to add additional email adapters.
+</p>
+
+<h2>Drawbridge Screencast</h2>
+<p>
+I’ve created a short screencast to show how easy it is to add drawbridge to an existing Express.js application. Before you watch the screencast it’s important that I outline a couple of caveats:
+</p>
+<p>
+  <ol>
+    <li>Drawbridge is not ready for production - it’s basically a working prototype.</li>
+    <li>Drawbridge views and variables are inconsistently named, that will need to be fixed.</li>
+    <li>The code needs refactoring and more testing.</li>
+    <li>Drawbridge needs to be picked apart for security issues.</li>
+  </ol>
+</p>
+<p>
+With those caveats out of the way here is the video:
+</p>
+
+<p>
+<iframe src="http://player.vimeo.com/video/40780990?title=0&amp;byline=0&amp;portrait=0" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/40780990">Drawbridge.js</a> from <a href="http://vimeo.com/user11381617">Liam Kaufman</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+</p>
+
+<p>
+While I built Drawbridge.js to scratch my own itch, I hope others will find it useful as well. Once I refine it further I will most certainly start to use it in my own projects. If you’re interested in Drawbridge 1) watch the project on Github and 2) try and get it working on your toy Express apps. I welcome feedback on both the architecture of Drawbridge and its security.
+</p>
+
+<p>
+<a class="github" href="https://github.com/liamks/Drawbridge.js"><span></span>Drawbridge.js on Github</a>
+</p>
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2025
+     Liam Kaufman 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

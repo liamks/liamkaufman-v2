@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Integrating Backbone Boilerplate with Rails 3 · Liam Kaufman
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Liam Kaufman">
+<meta name="description" content="
+Despite making several small Backbone.js apps in the past year, Backbone.js had never really clicked with me. I wasn&#39;t crazy about having to spend time thinking about file and folder organizing for JavaScript and template files. I was also unsure how all the pieces would fit together. Thanks to Tim Branyen&#39;s Backbone Boilerplate those issues have been significantly reduced. According to Backbone Boilerplate&#39;s documentation: &#34;This boilerplate is the product of much research and frustration. Existing boilerplates freely modify Backbone core, lack a build process, and are very prescriptive; this boilerplate changes that.&#34;
+">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Integrating Backbone Boilerplate with Rails 3">
+  <meta name="twitter:description" content="Despite making several small Backbone.js apps in the past year, Backbone.js had never really clicked with me. I wasn&#39;t crazy about having to spend time thinking about file and folder organizing for JavaScript and template files. I was also unsure how all the pieces would fit together. Thanks to Tim Branyen&#39;s Backbone Boilerplate those issues have been significantly reduced. According to Backbone Boilerplate&#39;s documentation: &#34;This boilerplate is the product of much research and frustration. Existing boilerplates freely modify Backbone core, lack a build process, and are very prescriptive; this boilerplate changes that.&#34;">
+
+<meta property="og:url" content="http://localhost:1313/blog/2012/02/18/integrating-backbone-boilerplate-with-rails3/">
+  <meta property="og:site_name" content="Liam Kaufman">
+  <meta property="og:title" content="Integrating Backbone Boilerplate with Rails 3">
+  <meta property="og:description" content="Despite making several small Backbone.js apps in the past year, Backbone.js had never really clicked with me. I wasn&#39;t crazy about having to spend time thinking about file and folder organizing for JavaScript and template files. I was also unsure how all the pieces would fit together. Thanks to Tim Branyen&#39;s Backbone Boilerplate those issues have been significantly reduced. According to Backbone Boilerplate&#39;s documentation: &#34;This boilerplate is the product of much research and frustration. Existing boilerplates freely modify Backbone core, lack a build process, and are very prescriptive; this boilerplate changes that.&#34;">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2012-02-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2012-02-18T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/blog/2012/02/18/integrating-backbone-boilerplate-with-rails3/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+<body class="preload-transitions colorscheme-light">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Liam Kaufman
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/blog/2012/02/18/integrating-backbone-boilerplate-with-rails3/">
+          Integrating Backbone Boilerplate with Rails 3
+        </a>
+      </h1>
+    </header>
+
+    
+<p>
+Despite making several small Backbone.js apps in the past year, Backbone.js had never really clicked with me. I wasn't crazy about having to spend time thinking about file and folder organizing for JavaScript and template files. I was also unsure how all the pieces would fit together. Thanks to Tim Branyen's <a href="http://tbranyen.github.com/backbone-boilerplate/">Backbone Boilerplate</a> those issues have been significantly reduced. According to Backbone Boilerplate's documentation: "This boilerplate is the product of much research and frustration. Existing boilerplates freely modify Backbone core, lack a build process, and are very prescriptive; this boilerplate changes that."
+</p>
+<p>
+While I was excited to use Backbone Boilerplate, it wasn't immediately clear how I'd integrate it with Rails 3. After several hours of tinkering I came up with an approach that places the build product of your backbone app in the <code>lib/assets</code> folder. This approach means that the application can be integrated into the assets pipeline and easily deployed to heroku.
+
+<p>
+<a class="github" href="https://github.com/liamks/Rails-Backbone-boilerplate"><span></span>Code on Github</a>
+</p>
+
+<h2> Creating the Rails App</h2>
+
+```bash Getting Started
+// create a new rails app
+rails new rails-bb
+cd rails-bb/lib
+
+//remove the index file
+rm -r public/index.html
+
+cd lib
+git clone https://github.com/tbranyen/backbone-boilerplate.git
+cd backbone-boilerplate
+
+//switch to the amd branch
+git checkout amd
+rm -rf .git
+```
+<h2> Changing Build Settings </h2>
+<p>
+In biolerplate's config.js file modify the following to:
+</p>
+
+```javascript line 49 - lib/backbone-boilerplate/build/config.js
+concat: {
+  "dist/debug/require.js": [
+    "assets/js/libs/almond.js",
+    "dist/debug/templates.js",
+    "dist/debug/require.js"
+  ],
+
+  "../assets/javascripts/require-app.js": [
+    "assets/js/libs/almond.js",
+    "dist/debug/templates.js",
+    "dist/debug/require.js"
+  ]
+},
+```
+```javascript line 67 - lib/backbone-boilerplate/build/config.js
+mincss: {
+  "dist/release/index.css": [
+    "assets/css/style.css"
+  ],
+
+  "../assets/stylesheets/index.css": [
+    "assets/css/style.css"
+  ]
+},
+```
+
+<h2> Creating a Rails Layout and Controller </h2>
+<p>
+To build the app, go to <code>lib/backbone-boilerplate</code> and run <code>node build default mincss</code>. The build script will create <code>lib/assets/javascripts/require-app.js</code> that includes both the backbone-boilerplate application and the template files. In next step create a rails layout file <code>app/views/layouts/bbapp.html.erb</code> with the following content:
+</p>
+
+```html bbapp.html.erb
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>RailsBb</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <!-- Main container -->
+  <div role="main" id="main"></div>
+
+  <!-- Application source -->
+  <%= javascript_include_tag "bbapp", "data-main" => "app/index" %>
+
+</body>
+</html>
+```
+
+<p>
+To plug the backbone app into the asset pipeline create <code>assets/javascript/bbapp.js</code> with the following contents:
+</p>
+
+```javascript bbapp.js
+//
+//= require require-app
+```
+<p>
+Now we need to let rails know that it needs to compile bbapp.js for production. To do this open <code>config/environments/production.rb</code> and after <code>config.assets.compile = false</code> add:  
+</p>
+
+```ruby config\environments\production.rb
+config.assets.precompile += %w( bbapp.js )
+```
+
+<p>
+To test that this works, we'll create a controller that has a single action that uses the <code>bbapp.html.erb</code> layout. From the root of the rails-bb application:
+</p>
+
+```bash
+rails generate controller BackBoneBoilerplate app
+```
+
+<p>
+Go to the controller that was just created: <code>back_bone_boilerplate_controller.rb</code> and specify the layout:
+</p>
+
+```ruby app/controllers/back_bone_boilerplate_controller.rb
+class BackBoneBoilerplateController < ApplicationController
+
+  layout 'bbapp'
+  
+  def app
+  end
+end
+```
+
+<h2> Final Steps </h2>
+<p>
+In <code>config/routes.rb</code> a root route is added to point to the controller actiona associated with the backbone app: <code>root :to => 'back_bone_boilerplate#app'</code> At this point we're nearly done. Unfortunately to get the backbone.png to load I changed the src attribute, of the img tag on line 2, in <code>lib/backbone-boilerplate/templates/example.html</code> to <code>src="/assets/backbone.png"</code> and then from <code>lib/backbone-boilerplate</code>:
+</p>
+
+```bash
+cp assets/img/backbone.png ../app/assets/images/backbone.png
+
+\\recompile
+node build default mincss
+
+cd ..
+rails server
+```
+
+<p>
+If all went well, when you go to http://0.0.0.0:3000 you should see:
+</p>
+<p>
+<img src="/images/backbone-boilerplate.png">
+</p>
+
+<p>
+While the above approach works, it was laborious and requires rebuilding the application with each change. Watching for changes with <code>node build watch</code> would certainly help. I think the advantage of this approach is that in development you can debug the JavaScript, while in production the javascript is minified and goes through the asset pipeline like any other JavaScript file in a Rails app.
+</p>
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2025
+     Liam Kaufman 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
