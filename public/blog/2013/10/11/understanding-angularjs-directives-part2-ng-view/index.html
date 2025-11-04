@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   Understanding AngularJS Directives Part 2: ngView · Liam Kaufman
 </title>
@@ -28,7 +28,7 @@
   <meta name="twitter:title" content="Understanding AngularJS Directives Part 2: ngView">
   <meta name="twitter:description" content="In a previous article I explored ng-repeat, it&#39;s implementation, and how to create a custom repeater. In this article I&#39;ll first delve into the inner workings of ngView and then walk through the creation of an &#34;ngMultiView&#34; directive. To get the most out of this article you&#39;ll need an intermediate understanding of creating directives (via the previous article on ng-repeat and reading the the AngularJS directive guide). Starting with AngualrJS 1.2, the ngView directive, and the $route service were moved into a separate module called ngRoute. As a result, to use routes and ngView your app must explicitly declare it as a dependency. Furthermore, the syntax for the &#34;otherwise&#34; statement is slightly different from older versions of AngularJS. Below is a complete example of a tiny AngularJS 1.2 app with two routes and a default:">
 
-<meta property="og:url" content="http://www.example.com/blog/2013/10/11/understanding-angularjs-directives-part2-ng-view/">
+<meta property="og:url" content="http://localhost:1313/blog/2013/10/11/understanding-angularjs-directives-part2-ng-view/">
   <meta property="og:site_name" content="Liam Kaufman">
   <meta property="og:title" content="Understanding AngularJS Directives Part 2: ngView">
   <meta property="og:description" content="In a previous article I explored ng-repeat, it&#39;s implementation, and how to create a custom repeater. In this article I&#39;ll first delve into the inner workings of ngView and then walk through the creation of an &#34;ngMultiView&#34; directive. To get the most out of this article you&#39;ll need an intermediate understanding of creating directives (via the previous article on ng-repeat and reading the the AngularJS directive guide). Starting with AngualrJS 1.2, the ngView directive, and the $route service were moved into a separate module called ngRoute. As a result, to use routes and ngView your app must explicitly declare it as a dependency. Furthermore, the syntax for the &#34;otherwise&#34; statement is slightly different from older versions of AngularJS. Below is a complete example of a tiny AngularJS 1.2 app with two routes and a default:">
@@ -41,7 +41,7 @@
 
 
 
-<link rel="canonical" href="http://www.example.com/blog/2013/10/11/understanding-angularjs-directives-part2-ng-view/">
+<link rel="canonical" href="http://localhost:1313/blog/2013/10/11/understanding-angularjs-directives-part2-ng-view/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -51,7 +51,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
@@ -72,7 +72,8 @@
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-<link rel="manifest" href="/site.webmanifest">
+
+
 <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
 
 
@@ -101,7 +102,7 @@
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://www.example.com/">
+    <a class="navigation-title" href="http://localhost:1313/">
       Liam Kaufman
     </a>
     
@@ -136,7 +137,7 @@
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="http://www.example.com/blog/2013/10/11/understanding-angularjs-directives-part2-ng-view/">
+            <a class="title-link" href="http://localhost:1313/blog/2013/10/11/understanding-angularjs-directives-part2-ng-view/">
               Understanding AngularJS Directives Part 2: ngView
             </a>
           </h1>
@@ -171,20 +172,20 @@
   Starting with AngualrJS 1.2, the <code>ngView</code> directive, and the <code>$route</code> service were moved into a separate module called <code>ngRoute</code>. As a result, to use routes and <code>ngView</code> your app must explicitly declare it as a dependency. Furthermore, the syntax for the "otherwise" statement is slightly different from older versions of AngularJS. Below is a complete example of a tiny AngularJS 1.2 app with two routes and a default:
 </p>
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/E259J/11/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/E259J/11/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <h2>Undocumented features of ngView</h2>
 <p>
   In the process of understanding the code behind ngView I came across two undocumented attributes: "onload" and "autoscroll". The onload attribute can take any Angular expression and will execute it every time the view changes. Autoscroll uses the <a href="http://docs.angularjs.org/api/ng.$anchorScroll">$autoScroll service</a> and scrolls to a specific element based on the current value of $location.hash(). Finally, near the very end of the directive, after <code>link(currentScope)</code> is called the <code>'$viewContentLoaded'</code> is emitted within the current scope - an event which you can use within your controller. Below is a revised version of the above example that includes the onload attribute.
 </p>
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/E259J/12/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/E259J/12/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <h2>How ngView Works?</h2>
 
 <p>In order to understand ngView, I think it's useful to create a simplified version of it. Below is ngViewLite, a version of ngView that does not include scope cleanup or animations, but is otherwise identical to ngView. </p>
 
-<iframe width="100%" height="400" src="http://jsfiddle.net/yr22b/26/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="400" src="https://jsfiddle.net/yr22b/26/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <p>
   First, we bind a function <code>update</code> to the <code>$routeChangeSuccess</code>; when the route changes, update will be called. Right after attaching the function to the event we immediately call <code>update()</code> to load the initial contents into the view.
@@ -214,7 +215,7 @@
   <li>Using the url variable, and the panel, we can lookup the corresponding controller and template from the <code>MultiViewPaths</code> value.</li>
   <li>Once we have the controller and template, ngMultiView works almost identically to <code>ngView</code>.</li>
 </ol>
-<iframe width="100%" height="300" src="http://jsfiddle.net/WKZ5N/27/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/WKZ5N/27/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 <p>
   Our ngMultiView is very basic, it doesn't take into account parameters being passed through urls, nor does it deal with scope cleanup, or animations. If you need more functionality I'd recommend starting with the <code>$routes</code> service and modifying it to accommodate multiple views.
 </p>
@@ -226,9 +227,6 @@
 
 
       <footer>
-        
-
-
         <div id="disqus_thread"></div>
 <script>
   window.disqus_config = function () {
@@ -253,12 +251,6 @@
         }
     });
 </script>
-        
-        
-        
-        
-        
-        
       </footer>
     </article>
 
@@ -288,7 +280,7 @@
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   

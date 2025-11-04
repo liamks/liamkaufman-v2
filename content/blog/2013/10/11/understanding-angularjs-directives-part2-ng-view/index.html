@@ -17,20 +17,20 @@ draft: false
   Starting with AngualrJS 1.2, the <code>ngView</code> directive, and the <code>$route</code> service were moved into a separate module called <code>ngRoute</code>. As a result, to use routes and <code>ngView</code> your app must explicitly declare it as a dependency. Furthermore, the syntax for the "otherwise" statement is slightly different from older versions of AngularJS. Below is a complete example of a tiny AngularJS 1.2 app with two routes and a default:
 </p>
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/E259J/11/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/E259J/11/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <h2>Undocumented features of ngView</h2>
 <p>
   In the process of understanding the code behind ngView I came across two undocumented attributes: "onload" and "autoscroll". The onload attribute can take any Angular expression and will execute it every time the view changes. Autoscroll uses the <a href="http://docs.angularjs.org/api/ng.$anchorScroll">$autoScroll service</a> and scrolls to a specific element based on the current value of $location.hash(). Finally, near the very end of the directive, after <code>link(currentScope)</code> is called the <code>'$viewContentLoaded'</code> is emitted within the current scope - an event which you can use within your controller. Below is a revised version of the above example that includes the onload attribute.
 </p>
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/E259J/12/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/E259J/12/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <h2>How ngView Works?</h2>
 
 <p>In order to understand ngView, I think it's useful to create a simplified version of it. Below is ngViewLite, a version of ngView that does not include scope cleanup or animations, but is otherwise identical to ngView. </p>
 
-<iframe width="100%" height="400" src="http://jsfiddle.net/yr22b/26/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="400" src="https://jsfiddle.net/yr22b/26/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 <p>
   First, we bind a function <code>update</code> to the <code>$routeChangeSuccess</code>; when the route changes, update will be called. Right after attaching the function to the event we immediately call <code>update()</code> to load the initial contents into the view.
@@ -60,7 +60,7 @@ draft: false
   <li>Using the url variable, and the panel, we can lookup the corresponding controller and template from the <code>MultiViewPaths</code> value.</li>
   <li>Once we have the controller and template, ngMultiView works almost identically to <code>ngView</code>.</li>
 </ol>
-<iframe width="100%" height="300" src="http://jsfiddle.net/WKZ5N/27/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/WKZ5N/27/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 <p>
   Our ngMultiView is very basic, it doesn't take into account parameters being passed through urls, nor does it deal with scope cleanup, or animations. If you need more functionality I'd recommend starting with the <code>$routes</code> service and modifying it to accommodate multiple views.
 </p>
