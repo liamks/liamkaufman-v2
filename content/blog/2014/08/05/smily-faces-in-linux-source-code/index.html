@@ -73,25 +73,25 @@ draft: false
   }
 </style>
 <script type="text/javascript">
-  $.domReady(function(){
-      var $table = $('.table-fixed');
-      //Make a clone of our table
-      var $firstColumnItems = $table.find('th:first-child,td:first-child');
+  // $.domReady(function(){
+  //     var $table = $('.table-fixed');
+  //     //Make a clone of our table
+  //     var $firstColumnItems = $table.find('th:first-child,td:first-child');
 
-      var firstColumnHeaderWidth = $($firstColumnItems[0]).width();
+  //     var firstColumnHeaderWidth = $($firstColumnItems[0]).width();
 
-      //Match the height of the rows to that of the original table's
-      $firstColumnItems.each(function (elem, i) {
-          var node = this.cloneNode();
-          node.textContent = $(this).text();
+  //     //Match the height of the rows to that of the original table's
+  //     $firstColumnItems.each(function (elem, i) {
+  //         var node = this.cloneNode();
+  //         node.textContent = $(this).text();
           
-          $(node).addClass(i%2 === 0  ? 'alternate' : 'normal');
-          $(node).height($(this).height());
-          $(node).width(firstColumnHeaderWidth);
-          $(node).addClass('fixed-column');
-          $(this).before(node);
-      });
-  });
+  //         $(node).addClass(i%2 === 0  ? 'alternate' : 'normal');
+  //         $(node).height($(this).height());
+  //         $(node).width(firstColumnHeaderWidth);
+  //         $(node).addClass('fixed-column');
+  //         $(this).before(node);
+  //     });
+  // });
 </script>
 
 <div class="table table-alternate">
