@@ -6,8 +6,15 @@
     <description>Recent content on Liam Kaufman</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Oct 2025 19:48:53 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 06 Nov 2025 21:27:30 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FDA Committee meeting for generative AI-enabled mental health medical devices</title>
+      <link>http://localhost:1313/posts/fda-generative-ai-enabled-mental-health-devices/</link>
+      <pubDate>Thu, 06 Nov 2025 21:27:30 -0500</pubDate>
+      <guid>http://localhost:1313/posts/fda-generative-ai-enabled-mental-health-devices/</guid>
+      <description>&lt;p&gt;Today the FDA held their “Digital Health Advisory Committee Meeting” to get feedback from industry experts (payers, providers, startups, etc), academics and clinicians on “Generative Artificial Intelligence-Enabled Mental Health Medical Devices.” There were a few clear themes across the sessions:&lt;/p&gt;&#xA;&lt;p&gt;There is a large unmet need for mental health services and therapy. This is caused by many issues: too few clinicians, lack of financial resources to seek help or access to care.&#xA;Generative AI has a huge potential to fill the unmet need and democratise mental health care.&#xA;AI based mental health tools should be regulated with a risk-based approach like medical devices in general.&#xA;There should exist a taxonomy, like with self-driving cars (e.g. level 1 to level 5), for AI used in mental health care.&#xA;Many mainstream LLMs are already being used for therapy, but have not been finetuned or rigorously tested for that use case.&#xA;There’s a clear need to monitor AI models once they’ve been deployed to track model drift, adverse events, suicidality, etc. Based on the questions at the event it wasn’t clear who will eventually be doing that monitoring, but my guess is that the vendor will have to take this on.&#xA;LLM-based mental health tools or digital therapeutics show much greater engagement than traditional digital health tools of pre-2022.&#xA;Vendors should make it clear to users that they are talking to a bot - that wasn’t always clear with existing models.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>NHS AI Trial Delivers Savings</title>
       <link>http://localhost:1313/posts/nhs-ai-trial-delivers-savings/</link>
