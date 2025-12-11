@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2025-12-06T17:37:43Z
 title = "Rough Notes: Us Against Alzheimer's: Measure What Matters Most (WMM)"
 description = ""
