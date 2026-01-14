@@ -6,8 +6,15 @@
     <description>Recent content on Liam Kaufman</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 03 Jan 2026 17:10:41 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 13 Jan 2026 20:10:29 -0500</lastBuildDate>
     <atom:link href="https://liamkaufman.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs</title>
+      <link>https://liamkaufman.com/posts/ai-fda-recommendation/</link>
+      <pubDate>Tue, 13 Jan 2026 20:10:29 -0500</pubDate>
+      <guid>https://liamkaufman.com/posts/ai-fda-recommendation/</guid>
+      <description>&lt;p&gt;Last week the &lt;a href=&#34;https://www.fda.gov/media/184830/download&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs&lt;/a&gt;. Overall the guidance covers the basics for model development, training and testing and the special considerations based on the level of risk associated with the model. Reassuringly the guidance doesn’t deviate from many best practices that the industry has developed over the last decade. In many cases the recommendations are high level and are left up to the sponsor to determine the exact methodology and rationale for their decisions.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>FDA Guidance on Assessment of Abuse Potential of Drugs</title>
       <link>https://liamkaufman.com/posts/fda-abuse-potential/</link>
