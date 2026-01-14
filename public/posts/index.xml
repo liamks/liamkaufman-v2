@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Liam Kaufman</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://liamkaufman.com/posts/</link>
     <description>Recent content in Posts on Liam Kaufman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 13 Jan 2026 20:10:29 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://liamkaufman.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs</title>
-      <link>http://localhost:1313/posts/ai-fda-recommendation/</link>
+      <link>https://liamkaufman.com/posts/ai-fda-recommendation/</link>
       <pubDate>Tue, 13 Jan 2026 20:10:29 -0500</pubDate>
-      <guid>http://localhost:1313/posts/ai-fda-recommendation/</guid>
+      <guid>https://liamkaufman.com/posts/ai-fda-recommendation/</guid>
       <description>&lt;p&gt;Last week the &lt;a href=&#34;https://www.fda.gov/media/184830/download&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs&lt;/a&gt;. Overall the guidance covers the basics for model development, training and testing and the special considerations based on the level of risk associated with the model. Reassuringly the guidance doesn’t deviate from many best practices that the industry has developed over the last decade. In many cases the recommendations are high level and are left up to the sponsor to determine the exact methodology and rationale for their decisions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>FDA Guidance on Assessment of Abuse Potential of Drugs</title>
-      <link>http://localhost:1313/posts/fda-abuse-potential/</link>
+      <link>https://liamkaufman.com/posts/fda-abuse-potential/</link>
       <pubDate>Sat, 03 Jan 2026 17:10:41 -0500</pubDate>
-      <guid>http://localhost:1313/posts/fda-abuse-potential/</guid>
+      <guid>https://liamkaufman.com/posts/fda-abuse-potential/</guid>
       <description>&lt;p&gt;An important consideration for the development of new drugs is whether they can be abused - &lt;a href=&#34;https://www.fda.gov/media/116739/download&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the FDA released a guidance document in January 2017 - detailing considerations in the assessment of abuse potential for drugs&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The document defines drugs that have CNS activity and produce euphoria (or other changes in mood), hallucinations, and effects consistent with CNS depressants or stimulants as having abuse potential. Prior to in-human studies the document advises using chemistry studies, receptor binding studies and second messenger system studies to determine if a drug has CNS activity. Additionally, studies using rats can test addictiveness and other properties further.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rough Notes: Us Against Alzheimer&#39;s: Measure What Matters Most (WMM)</title>
-      <link>http://localhost:1313/posts/us-against-ad-what-matters-most/</link>
+      <link>https://liamkaufman.com/posts/us-against-ad-what-matters-most/</link>
       <pubDate>Sat, 06 Dec 2025 17:37:43 +0000</pubDate>
-      <guid>http://localhost:1313/posts/us-against-ad-what-matters-most/</guid>
+      <guid>https://liamkaufman.com/posts/us-against-ad-what-matters-most/</guid>
       <description>&lt;p&gt;From 2023 to 2024 &lt;a href=&#34;https://www.usagainstalzheimers.org/networks/ad-pace&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Us Against Alzheimer’s published a number of publications and abstracts&lt;/a&gt; covering their “Alzheimer’s Disease Patient and Caregiver Engagement (AD PACE)” What Matters Most (WMM) research program. AD PACE was a collaborative effort that included not only people from Us Against Alzheimer’s, but also representatives from Biogen, Lundbeck, Otsuka, BI, Takeda and more.&lt;/p&gt;&#xA;&lt;p&gt;The objective of AD PACE was to identify symptoms, impacts and outcomes of AD that most mattered to patients and their caregivers. In recent years the FDA, and pharmaceutical companies, have placed more emphasis on picking measures that matter to patients and their families, hence the importance of this type of work.&lt;/p&gt;</description>
     </item>
     <item>
       <title>FDA&#39;s Guidance on Patient-Focused Outcome Measurement in Clinical Trials</title>
-      <link>http://localhost:1313/posts/patient-focused-outcome-measurement-in-clinical-trials/</link>
+      <link>https://liamkaufman.com/posts/patient-focused-outcome-measurement-in-clinical-trials/</link>
       <pubDate>Sun, 23 Nov 2025 21:53:59 -0500</pubDate>
-      <guid>http://localhost:1313/posts/patient-focused-outcome-measurement-in-clinical-trials/</guid>
+      <guid>https://liamkaufman.com/posts/patient-focused-outcome-measurement-in-clinical-trials/</guid>
       <description>&lt;p&gt;With more and more digital health drug development tools (DDT) being used in clinical research I’m increasingly interested in understanding how we can differentiate these tools from status quo “gold standard” measures. What’s a sponsor’s incentive to use something other than the gold standard? Focusing on DDT’s objectivity, reliability, etc are important but I believe that focusing on what’s important to the patient is critical and often overlooked.&lt;/p&gt;&#xA;&lt;p&gt;With this lens, I was interested in reviewing the FDA’s guidance on “&lt;a href=&#34;https://www.fda.gov/regulatory-information/search-fda-guidance-documents/patient-focused-drug-development-selecting-developing-or-modifying-fit-purpose-clinical-outcome&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;patient-focused drug development: selecting, developing, or modifying fit-for-purpose clinical outcome assessments&lt;/a&gt;”. The guidance document outlines a roadmap that sponsors can follow to ensure clinical outcome assessments (COAs) are fit-for-purpose. Before diving into the roadmap it’s helpful to define a few key terms: 1) meaningful aspect of health (&lt;strong&gt;MAH&lt;/strong&gt;), 2) concept of interest (&lt;strong&gt;COI&lt;/strong&gt;), 3) context of use (&lt;strong&gt;COU&lt;/strong&gt;) and finally 4) &lt;strong&gt;fit-for-purpose&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>FDA Committee meeting for generative AI-enabled mental health medical devices</title>
-      <link>http://localhost:1313/posts/fda-generative-ai-enabled-mental-health-devices/</link>
+      <link>https://liamkaufman.com/posts/fda-generative-ai-enabled-mental-health-devices/</link>
       <pubDate>Thu, 06 Nov 2025 21:27:30 -0500</pubDate>
-      <guid>http://localhost:1313/posts/fda-generative-ai-enabled-mental-health-devices/</guid>
+      <guid>https://liamkaufman.com/posts/fda-generative-ai-enabled-mental-health-devices/</guid>
       <description>&lt;p&gt;Today the FDA held their “Digital Health Advisory Committee Meeting” to get feedback from industry experts (payers, providers, startups, etc), academics and clinicians on “Generative Artificial Intelligence-Enabled Mental Health Medical Devices.” There were a few clear themes across the sessions:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;There is a large unmet need for mental health services and therapy. This is caused by many issues: too few clinicians, lack of financial resources to seek help or access to care.&lt;/li&gt;&#xA;&lt;li&gt;Generative AI has a huge potential to fill the unmet need and democratise mental health care.&lt;/li&gt;&#xA;&lt;li&gt;AI based mental health tools should be regulated with a risk-based approach like medical devices in general.&lt;/li&gt;&#xA;&lt;li&gt;There should exist a taxonomy, like with self-driving cars (e.g. level 1 to level 5), for AI used in mental health care.&lt;/li&gt;&#xA;&lt;li&gt;Many mainstream LLMs are already being used for therapy, but have not been finetuned or rigorously tested for that use case.&lt;/li&gt;&#xA;&lt;li&gt;There’s a clear need to monitor AI models once they’ve been deployed to track model drift, adverse events, suicidality, etc. Based on the questions at the event it wasn’t clear who will eventually be doing that monitoring, but my guess is that the vendor will have to take this on.&lt;/li&gt;&#xA;&lt;li&gt;LLM-based mental health tools or digital therapeutics show much greater engagement than traditional digital health tools of pre-2022.&lt;/li&gt;&#xA;&lt;li&gt;Vendors should make it clear to users that they are talking to a bot - that wasn’t always clear with existing models.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;What surprised me the most was the lack of rigor when evaluating these tools. In some cases these tools weren’t evaluated and when they were evaluated it was retrospectively. Even when they were evaluated prospectively the primary endpoint was the PHQ-9. Several speakers called this out and indicated that the PHQ-9 is not the best endpoint for evaluating efficacy.&lt;/p&gt;</description>
     </item>
     <item>
       <title>NHS AI Trial Delivers Savings</title>
-      <link>http://localhost:1313/posts/nhs-ai-trial-delivers-savings/</link>
+      <link>https://liamkaufman.com/posts/nhs-ai-trial-delivers-savings/</link>
       <pubDate>Wed, 29 Oct 2025 19:48:53 -0400</pubDate>
-      <guid>http://localhost:1313/posts/nhs-ai-trial-delivers-savings/</guid>
+      <guid>https://liamkaufman.com/posts/nhs-ai-trial-delivers-savings/</guid>
       <description>&lt;p&gt;This week the UK Government unveiled the &lt;a href=&#34;https://www.gov.uk/government/news/major-nhs-ai-trial-delivers-unprecedented-time-and-cost-savings&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;results of an AI pilot that they conducted with Microsoft 365 Copilot&lt;/a&gt;. The government notes that it is the largest study of its kind and it involved more than 30,000 NHS workers. The focus of the pilot was on time savings and productivity.&lt;/p&gt;&#xA;&lt;p&gt;They found that “AI-powered administrative support” could save an average of 43 minutes per staff member per day. The time savings come from several activities:&lt;/p&gt;</description>
     </item>
   </channel>

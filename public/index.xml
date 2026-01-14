@@ -2,241 +2,241 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Liam Kaufman</title>
-    <link>http://localhost:1313/</link>
+    <link>https://liamkaufman.com/</link>
     <description>Recent content on Liam Kaufman</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 13 Jan 2026 20:10:29 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://liamkaufman.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs</title>
-      <link>http://localhost:1313/posts/ai-fda-recommendation/</link>
+      <link>https://liamkaufman.com/posts/ai-fda-recommendation/</link>
       <pubDate>Tue, 13 Jan 2026 20:10:29 -0500</pubDate>
-      <guid>http://localhost:1313/posts/ai-fda-recommendation/</guid>
+      <guid>https://liamkaufman.com/posts/ai-fda-recommendation/</guid>
       <description>&lt;p&gt;Last week the &lt;a href=&#34;https://www.fda.gov/media/184830/download&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs&lt;/a&gt;. Overall the guidance covers the basics for model development, training and testing and the special considerations based on the level of risk associated with the model. Reassuringly the guidance doesn’t deviate from many best practices that the industry has developed over the last decade. In many cases the recommendations are high level and are left up to the sponsor to determine the exact methodology and rationale for their decisions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>FDA Guidance on Assessment of Abuse Potential of Drugs</title>
-      <link>http://localhost:1313/posts/fda-abuse-potential/</link>
+      <link>https://liamkaufman.com/posts/fda-abuse-potential/</link>
       <pubDate>Sat, 03 Jan 2026 17:10:41 -0500</pubDate>
-      <guid>http://localhost:1313/posts/fda-abuse-potential/</guid>
+      <guid>https://liamkaufman.com/posts/fda-abuse-potential/</guid>
       <description>&lt;p&gt;An important consideration for the development of new drugs is whether they can be abused - &lt;a href=&#34;https://www.fda.gov/media/116739/download&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the FDA released a guidance document in January 2017 - detailing considerations in the assessment of abuse potential for drugs&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The document defines drugs that have CNS activity and produce euphoria (or other changes in mood), hallucinations, and effects consistent with CNS depressants or stimulants as having abuse potential. Prior to in-human studies the document advises using chemistry studies, receptor binding studies and second messenger system studies to determine if a drug has CNS activity. Additionally, studies using rats can test addictiveness and other properties further.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rough Notes: Us Against Alzheimer&#39;s: Measure What Matters Most (WMM)</title>
-      <link>http://localhost:1313/posts/us-against-ad-what-matters-most/</link>
+      <link>https://liamkaufman.com/posts/us-against-ad-what-matters-most/</link>
       <pubDate>Sat, 06 Dec 2025 17:37:43 +0000</pubDate>
-      <guid>http://localhost:1313/posts/us-against-ad-what-matters-most/</guid>
+      <guid>https://liamkaufman.com/posts/us-against-ad-what-matters-most/</guid>
       <description>&lt;p&gt;From 2023 to 2024 &lt;a href=&#34;https://www.usagainstalzheimers.org/networks/ad-pace&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Us Against Alzheimer’s published a number of publications and abstracts&lt;/a&gt; covering their “Alzheimer’s Disease Patient and Caregiver Engagement (AD PACE)” What Matters Most (WMM) research program. AD PACE was a collaborative effort that included not only people from Us Against Alzheimer’s, but also representatives from Biogen, Lundbeck, Otsuka, BI, Takeda and more.&lt;/p&gt;&#xA;&lt;p&gt;The objective of AD PACE was to identify symptoms, impacts and outcomes of AD that most mattered to patients and their caregivers. In recent years the FDA, and pharmaceutical companies, have placed more emphasis on picking measures that matter to patients and their families, hence the importance of this type of work.&lt;/p&gt;</description>
     </item>
     <item>
       <title>FDA&#39;s Guidance on Patient-Focused Outcome Measurement in Clinical Trials</title>
-      <link>http://localhost:1313/posts/patient-focused-outcome-measurement-in-clinical-trials/</link>
+      <link>https://liamkaufman.com/posts/patient-focused-outcome-measurement-in-clinical-trials/</link>
       <pubDate>Sun, 23 Nov 2025 21:53:59 -0500</pubDate>
-      <guid>http://localhost:1313/posts/patient-focused-outcome-measurement-in-clinical-trials/</guid>
+      <guid>https://liamkaufman.com/posts/patient-focused-outcome-measurement-in-clinical-trials/</guid>
       <description>&lt;p&gt;With more and more digital health drug development tools (DDT) being used in clinical research I’m increasingly interested in understanding how we can differentiate these tools from status quo “gold standard” measures. What’s a sponsor’s incentive to use something other than the gold standard? Focusing on DDT’s objectivity, reliability, etc are important but I believe that focusing on what’s important to the patient is critical and often overlooked.&lt;/p&gt;&#xA;&lt;p&gt;With this lens, I was interested in reviewing the FDA’s guidance on “&lt;a href=&#34;https://www.fda.gov/regulatory-information/search-fda-guidance-documents/patient-focused-drug-development-selecting-developing-or-modifying-fit-purpose-clinical-outcome&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;patient-focused drug development: selecting, developing, or modifying fit-for-purpose clinical outcome assessments&lt;/a&gt;”. The guidance document outlines a roadmap that sponsors can follow to ensure clinical outcome assessments (COAs) are fit-for-purpose. Before diving into the roadmap it’s helpful to define a few key terms: 1) meaningful aspect of health (&lt;strong&gt;MAH&lt;/strong&gt;), 2) concept of interest (&lt;strong&gt;COI&lt;/strong&gt;), 3) context of use (&lt;strong&gt;COU&lt;/strong&gt;) and finally 4) &lt;strong&gt;fit-for-purpose&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>FDA Committee meeting for generative AI-enabled mental health medical devices</title>
-      <link>http://localhost:1313/posts/fda-generative-ai-enabled-mental-health-devices/</link>
+      <link>https://liamkaufman.com/posts/fda-generative-ai-enabled-mental-health-devices/</link>
       <pubDate>Thu, 06 Nov 2025 21:27:30 -0500</pubDate>
-      <guid>http://localhost:1313/posts/fda-generative-ai-enabled-mental-health-devices/</guid>
+      <guid>https://liamkaufman.com/posts/fda-generative-ai-enabled-mental-health-devices/</guid>
       <description>&lt;p&gt;Today the FDA held their “Digital Health Advisory Committee Meeting” to get feedback from industry experts (payers, providers, startups, etc), academics and clinicians on “Generative Artificial Intelligence-Enabled Mental Health Medical Devices.” There were a few clear themes across the sessions:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;There is a large unmet need for mental health services and therapy. This is caused by many issues: too few clinicians, lack of financial resources to seek help or access to care.&lt;/li&gt;&#xA;&lt;li&gt;Generative AI has a huge potential to fill the unmet need and democratise mental health care.&lt;/li&gt;&#xA;&lt;li&gt;AI based mental health tools should be regulated with a risk-based approach like medical devices in general.&lt;/li&gt;&#xA;&lt;li&gt;There should exist a taxonomy, like with self-driving cars (e.g. level 1 to level 5), for AI used in mental health care.&lt;/li&gt;&#xA;&lt;li&gt;Many mainstream LLMs are already being used for therapy, but have not been finetuned or rigorously tested for that use case.&lt;/li&gt;&#xA;&lt;li&gt;There’s a clear need to monitor AI models once they’ve been deployed to track model drift, adverse events, suicidality, etc. Based on the questions at the event it wasn’t clear who will eventually be doing that monitoring, but my guess is that the vendor will have to take this on.&lt;/li&gt;&#xA;&lt;li&gt;LLM-based mental health tools or digital therapeutics show much greater engagement than traditional digital health tools of pre-2022.&lt;/li&gt;&#xA;&lt;li&gt;Vendors should make it clear to users that they are talking to a bot - that wasn’t always clear with existing models.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;What surprised me the most was the lack of rigor when evaluating these tools. In some cases these tools weren’t evaluated and when they were evaluated it was retrospectively. Even when they were evaluated prospectively the primary endpoint was the PHQ-9. Several speakers called this out and indicated that the PHQ-9 is not the best endpoint for evaluating efficacy.&lt;/p&gt;</description>
     </item>
     <item>
       <title>NHS AI Trial Delivers Savings</title>
-      <link>http://localhost:1313/posts/nhs-ai-trial-delivers-savings/</link>
+      <link>https://liamkaufman.com/posts/nhs-ai-trial-delivers-savings/</link>
       <pubDate>Wed, 29 Oct 2025 19:48:53 -0400</pubDate>
-      <guid>http://localhost:1313/posts/nhs-ai-trial-delivers-savings/</guid>
+      <guid>https://liamkaufman.com/posts/nhs-ai-trial-delivers-savings/</guid>
       <description>&lt;p&gt;This week the UK Government unveiled the &lt;a href=&#34;https://www.gov.uk/government/news/major-nhs-ai-trial-delivers-unprecedented-time-and-cost-savings&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;results of an AI pilot that they conducted with Microsoft 365 Copilot&lt;/a&gt;. The government notes that it is the largest study of its kind and it involved more than 30,000 NHS workers. The focus of the pilot was on time savings and productivity.&lt;/p&gt;&#xA;&lt;p&gt;They found that “AI-powered administrative support” could save an average of 43 minutes per staff member per day. The time savings come from several activities:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Smiley Faces in Linux Source Code and Token Statistics</title>
-      <link>http://localhost:1313/blog/2014/08/05/smily-faces-in-linux-source-code/</link>
+      <link>https://liamkaufman.com/blog/2014/08/05/smily-faces-in-linux-source-code/</link>
       <pubDate>Tue, 05 Aug 2014 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2014/08/05/smily-faces-in-linux-source-code/</guid>
+      <guid>https://liamkaufman.com/blog/2014/08/05/smily-faces-in-linux-source-code/</guid>
       <description>&lt;p&gt;&#xA;  Github uses &lt;a href=&#34;https://github.com/github/linguist&#34;&gt;Linguist&lt;/a&gt;, a Ruby library, to help detect which programming language is in a given file. Recently, an issue was filed that indicated that Linguist incorrectly classifies Mercury (a programming language) files as Objective-c since they both use the same extension (.m). Linguist’s primary method for language detection is a file’s extension - a method that fell short for Mercury. If Mercury were added to Linguist, then there would be two languages with the same extension - and this is where things get interesting. If two languages share the same extension, or the file does not have an extension, Linguist has 3 methods for guessing the language. First it checks if the file has a shebang (&lt;code&gt;#!/bin/sh&lt;/code&gt;). If there is no shebang the second method it uses is a set of &lt;a href=&#34;https://github.com/github/linguist/blob/master/lib/linguist/heuristics.rb&#34;&gt;heuristics&lt;/a&gt;. For instance, if the file includes the “:-” token it concludes that the contents are prologue code, or if “defun” is present it’s common lisp. If it still hasn’t found a match the third method it uses is a &lt;a href=&#34;https://github.com/github/linguist/blob/master/lib/linguist/classifier.rb&#34;&gt;Bayesian classifier&lt;/a&gt;. Roughly speaking the classifier iterates over all of a file’s tokens, and for each token determines the probability that it is present in each programming language. Subsequently, it sums all those probabilities, sorts the results, and returns an array of language-probability pairs (e.g &lt;code&gt;[[‘Ruby’, 0.8], [‘Python’, 0.2]]&lt;/code&gt;). &#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding AngularJS Directives Part 2: ngView</title>
-      <link>http://localhost:1313/blog/2013/10/11/understanding-angularjs-directives-part2-ng-view/</link>
+      <link>https://liamkaufman.com/blog/2013/10/11/understanding-angularjs-directives-part2-ng-view/</link>
       <pubDate>Mon, 11 Nov 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/10/11/understanding-angularjs-directives-part2-ng-view/</guid>
+      <guid>https://liamkaufman.com/blog/2013/10/11/understanding-angularjs-directives-part2-ng-view/</guid>
       <description>&lt;p&gt;&#xA;  In a previous article I &lt;a href=&#34;blog/2013/05/13/understanding-angularjs-directives-part1-ng-repeat-and-compile/&#34;&gt;explored ng-repeat, it&#39;s implementation, and how to create a custom repeater&lt;/a&gt;. In this article I&#39;ll first delve into the inner workings of ngView and then walk through the creation of an &#34;ngMultiView&#34; directive. To get the most out of this article you&#39;ll need an intermediate understanding of creating directives (via  &lt;a href=&#34;blog/2013/05/13/understanding-angularjs-directives-part1-ng-repeat-and-compile/&#34;&gt;the previous article on ng-repeat&lt;/a&gt; and reading the &lt;a href=&#34;http://docs.angularjs.org/guide/directive&#34;&gt;the AngularJS directive guide&lt;/a&gt;).&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&#xA;  Starting with AngualrJS 1.2, the &lt;code&gt;ngView&lt;/code&gt; directive, and the &lt;code&gt;$route&lt;/code&gt; service were moved into a separate module called &lt;code&gt;ngRoute&lt;/code&gt;. As a result, to use routes and &lt;code&gt;ngView&lt;/code&gt; your app must explicitly declare it as a dependency. Furthermore, the syntax for the &#34;otherwise&#34; statement is slightly different from older versions of AngularJS. Below is a complete example of a tiny AngularJS 1.2 app with two routes and a default:&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Using AngularJS Promises</title>
-      <link>http://localhost:1313/blog/2013/09/09/using-angularjs-promises/</link>
+      <link>https://liamkaufman.com/blog/2013/09/09/using-angularjs-promises/</link>
       <pubDate>Mon, 09 Sep 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/09/09/using-angularjs-promises/</guid>
-      <description>&lt;p&gt;&#xA;  In my previous article I discussed the &lt;a href=&#34;http://localhost:1313/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/&#34;&gt;benefits of using dependency injection&lt;/a&gt; to make code more testable and modular. In this article I’ll focus on using promises within an AngularJS application. This article assume some prior knowledge of promises (&lt;a href=&#34;http://wildermuth.com/2013/8/3/JavaScript_Promises&#34;&gt;a good intro on promises&lt;/a&gt; and &lt;a href=&#34;http://docs.angularjs.org/api/ng.$q&#34;&gt;AngularJS&#39; official documentation&lt;/a&gt;).&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&#xA;  Promises can be used to unnest asynchronous functions and allows one to chain multiple functions together - increasing readability and making individual functions, within the chain, more reusable.&#xA;&lt;/p&gt;</description>
+      <guid>https://liamkaufman.com/blog/2013/09/09/using-angularjs-promises/</guid>
+      <description>&lt;p&gt;&#xA;  In my previous article I discussed the &lt;a href=&#34;https://liamkaufman.com/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/&#34;&gt;benefits of using dependency injection&lt;/a&gt; to make code more testable and modular. In this article I’ll focus on using promises within an AngularJS application. This article assume some prior knowledge of promises (&lt;a href=&#34;http://wildermuth.com/2013/8/3/JavaScript_Promises&#34;&gt;a good intro on promises&lt;/a&gt; and &lt;a href=&#34;http://docs.angularjs.org/api/ng.$q&#34;&gt;AngularJS&#39; official documentation&lt;/a&gt;).&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&#xA;  Promises can be used to unnest asynchronous functions and allows one to chain multiple functions together - increasing readability and making individual functions, within the chain, more reusable.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>How AngularJS Made Me a Better Node.js Developer</title>
-      <link>http://localhost:1313/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/</link>
+      <link>https://liamkaufman.com/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/</link>
       <pubDate>Tue, 06 Aug 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/</guid>
+      <guid>https://liamkaufman.com/blog/2013/08/06/how-angularjs-made-me-a-better-nodejs-developer/</guid>
       <description>&lt;p&gt;&#xA;&#x9;Over the past 6 years I’ve used Ruby on Rails, Backbone.js, Node and AngularJS.  RoR reinforced my knowledge of Model View Controller (MVC) while Backbone.js did the same for my knowledge of Publish/Subscribe. Like many who made the switch to Node, my first instinct was to try and apply MVC to my Node.js apps - however, it felt unnatural. Taking a &#34;class&#34;-based approach, using CoffeeScript, didn’t feel entirely natural either. &#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding AngularJS Directives Part 1: ng-repeat and compile</title>
-      <link>http://localhost:1313/blog/2013/05/13/understanding-angularjs-directives-part1-ng-repeat-and-compile/</link>
+      <link>https://liamkaufman.com/blog/2013/05/13/understanding-angularjs-directives-part1-ng-repeat-and-compile/</link>
       <pubDate>Mon, 13 May 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/05/13/understanding-angularjs-directives-part1-ng-repeat-and-compile/</guid>
+      <guid>https://liamkaufman.com/blog/2013/05/13/understanding-angularjs-directives-part1-ng-repeat-and-compile/</guid>
       <description>&lt;p&gt;&#xA;  My first impression of Angular.js was one of amazement. A small amount of code could do a lot. My worry with Angular, and other magical frameworks, is that initially you are productive, but eventually you hit a dead end requiring full understanding of how the magic works. In my quest to master Angular.js, I wanted to learn everything about creating custom directives - a goal that I’d hope would ameliorate the learning curve. &lt;a href=&#34;http://www.egghead.io/&#34;&gt;Egghead.io&lt;/a&gt; does a good job exploring basic, and intermediate, examples of custome directives but it still wasn’t clear when to use the compile parameter in a custome directive. &#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Adding Real-Time To A RESTful Rails App</title>
-      <link>http://localhost:1313/blog/2013/02/27/adding-real-time-to-a-restful-rails-app/</link>
+      <link>https://liamkaufman.com/blog/2013/02/27/adding-real-time-to-a-restful-rails-app/</link>
       <pubDate>Wed, 27 Feb 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/02/27/adding-real-time-to-a-restful-rails-app/</guid>
+      <guid>https://liamkaufman.com/blog/2013/02/27/adding-real-time-to-a-restful-rails-app/</guid>
       <description>&lt;p&gt;&#xA;  After rewriting &lt;a href=&#34;http://understoodit.com&#34;&gt;Understoodit&lt;/a&gt; several times I’ve spent a lot of time thinking about building real-time web applications. While I elected to rewrite 100% of Understoodit in Node, there are many existing Rails and Sinatra applications that can’t be completely rewritten, but could still benefit with the addition of real-time updates. The tutorial below starts with a traditional web-app written in Backbone and Ruby on Rails (RoR). Of course the modifications could easily be applied to any (Backbone|Angular|Ember) and (Rails|Sinatra|Django|Pylons) app.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Three Important Conversion Metrics You Should Watch</title>
-      <link>http://localhost:1313/blog/2013/02/08/three-important-conversion-metrics-you-should-watch/</link>
+      <link>https://liamkaufman.com/blog/2013/02/08/three-important-conversion-metrics-you-should-watch/</link>
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/02/08/three-important-conversion-metrics-you-should-watch/</guid>
+      <guid>https://liamkaufman.com/blog/2013/02/08/three-important-conversion-metrics-you-should-watch/</guid>
       <description>&lt;p&gt;&#xA;You’ve created an &lt;a href=&#34;http://liamkaufman.com/blog/2013/01/22/making-software-people-want-before-launching/&#34;&gt;app that your beta testers use&lt;/a&gt; and &lt;a href=&#34;http://liamkaufman.com/blog/2013/01/30/are-you-ready-to-launch/&#34;&gt;your launch was a huge success&lt;/a&gt;. Every day the number of registered users increases and you feel like you’re making progress and moving closer to your goals. &#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;It would be a mistake to hunker down and focus singularly on hammering out new features. Now that you’ve launched you have significantly more people visiting your homepage, creating accounts and using your app. You have much more data to help you prioritize what to do next. &#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Are You Ready To Launch?</title>
-      <link>http://localhost:1313/blog/2013/01/30/are-you-ready-to-launch/</link>
+      <link>https://liamkaufman.com/blog/2013/01/30/are-you-ready-to-launch/</link>
       <pubDate>Wed, 30 Jan 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/01/30/are-you-ready-to-launch/</guid>
+      <guid>https://liamkaufman.com/blog/2013/01/30/are-you-ready-to-launch/</guid>
       <description>&lt;p&gt;&#xA;  &lt;strong&gt;Last Week&lt;/strong&gt;: &lt;a href=&#34;http://liamkaufman.com/blog/2013/01/22/making-software-people-want-before-launching/&#34;&gt;Before Launching, Build Software People Use&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;You’ve created a product that people want to use, and now you’re eager to launch. From my experiences launching &lt;a href=&#34;https://understoodit.com&#34;&gt;Understoodit&lt;/a&gt;, in May 2012, I’ve compiled a set of steps that helped Understoodit get on several big sites including &lt;a href=&#34;http://techcrunch.com/2012/05/02/understoodit-lets-students-voice-their-confusion-without-having-to-raise-their-hands/&#34;&gt;TechCrunch&lt;/a&gt;, &lt;a href=&#34;http://www.thestar.com/news/gta/article/1173277--don-t-get-what-the-prof-s-talking-about-there-s-an-app-for-that&#34;&gt;Toronto Star&lt;/a&gt;, and &lt;a href=&#34;http://betakit.com/2012/05/03/understoodit-helps-confused-students-in-the-classroom&#34;&gt;BetaKit&lt;/a&gt;. If you have a large budget hiring a PR firm might be your best bet, otherwise the steps below will help you get started.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Before Launching Build Software People Use</title>
-      <link>http://localhost:1313/blog/2013/01/22/making-software-people-want-before-launching/</link>
+      <link>https://liamkaufman.com/blog/2013/01/22/making-software-people-want-before-launching/</link>
       <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/01/22/making-software-people-want-before-launching/</guid>
+      <guid>https://liamkaufman.com/blog/2013/01/22/making-software-people-want-before-launching/</guid>
       <description>&lt;p&gt;&#xA;You’re a talented developer and have a great idea for a startup. You’ve read &lt;a href=&#34;http://theleanstartup.com/&#34;&gt;&lt;em&gt;The Lean Startup&lt;/em&gt;&lt;/a&gt;, you’ve attended entrepreneur events, and you read &lt;a href=&#34;http://news.ycombinator.com/&#34;&gt;&lt;em&gt;Hacker News&lt;/em&gt;&lt;/a&gt;. At this point you’re confident that you’ll be able to build a compelling product while avoiding common startup mistakes. &#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Unfortunately, that pretty much summed up my (immodest) perception of myself prior to launching &lt;a href=&#34;https://understoodit.com&#34;&gt;Understoodit.com&lt;/a&gt;. &#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;While the May 2012 launch of Understoodit was more successful than I anticipated, there were certainly things I could have placed more focus on prior to launching. Below I’ve informally divided the pre-launch process into 5 stages:  1) finding customers, 2) the one feature, 3) early beta testing, 4) engaged users, and 5) time to launch.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why You Should Be Nice To Your Customers</title>
-      <link>http://localhost:1313/blog/2012/11/21/why-you-should-be-nice-to-your-customers/</link>
+      <link>https://liamkaufman.com/blog/2012/11/21/why-you-should-be-nice-to-your-customers/</link>
       <pubDate>Wed, 21 Nov 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/11/21/why-you-should-be-nice-to-your-customers/</guid>
+      <guid>https://liamkaufman.com/blog/2012/11/21/why-you-should-be-nice-to-your-customers/</guid>
       <description>&lt;p&gt;&#xA;Being nice to your customers seems like a no brainer. It makes perfect business sense: happy customers are less likely to stop using your service and more likely to refer your service to their friends. However, there is another significant reason that being nice pays off. &#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;Running a startup can be a tough slog. You’re unsure if people like what you&#39;re building enough for it to be successful. If you get some traction there will be people out there that will belittle your idea, or your execution. With all the unknowns, and the not-always-constructive criticism, it’s incredibly refreshing to interact with a nice customer that loves your product. &#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Stripe Would Be Perfect If...</title>
-      <link>http://localhost:1313/blog/2012/11/09/stripe-would-be-perfect-if/</link>
+      <link>https://liamkaufman.com/blog/2012/11/09/stripe-would-be-perfect-if/</link>
       <pubDate>Fri, 09 Nov 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/11/09/stripe-would-be-perfect-if/</guid>
+      <guid>https://liamkaufman.com/blog/2012/11/09/stripe-would-be-perfect-if/</guid>
       <description>&lt;p&gt;&#xA;I was among many Canadian developers who where happy to hear that Stripe had come to Canada. We were planning on adding subscriptions to &lt;a href=&#34;https://understoodit.com&#34;&gt;Understoodit.com&lt;/a&gt;, so the timing couldn’t have been better. We assumed that it would take a couple of days to integrate Stripe, but it actually took &lt;a href=&#34;https://twitter.com/davidmisshula&#34;&gt;@davidmisshula&lt;/a&gt; and me 7 days. The process gave me some insights that I thought I’d share.&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;I’ve heard that Stripe is significantly easier to integrate than its competitors, however, having never integrated a payment system I have no comparison. Overall I think Stripe is excellent and I’m glad we chose it, however, there are 4 areas, that if improved, would make Stripe perfect: 1) getting started, 2) taxes, 3) invoices and 4) edge cases.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Common JavaScript Errors</title>
-      <link>http://localhost:1313/blog/2012/09/09/common-javascript-errors/</link>
+      <link>https://liamkaufman.com/blog/2012/09/09/common-javascript-errors/</link>
       <pubDate>Sun, 09 Sep 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/09/09/common-javascript-errors/</guid>
+      <guid>https://liamkaufman.com/blog/2012/09/09/common-javascript-errors/</guid>
       <description>&lt;p&gt;&#xA; With the rise of thick client-side applications, and Node.js, JavaScript has become an increasingly important programming language. Despite its simplicity, JavaScript presents some difficulties for those new to the language. I thought it would be useful to outline several JavaScript errors that I commonly made when I was learning the language.&#xA;&lt;/p&gt;&#xA;&#xA;&lt;h2&gt;Scope: this, that and window&lt;/h2&gt;&#xA;&lt;p&gt;&#xA;  Like many programming languages JavaScript provides internal access to objects using the keyword &lt;code&gt;this&lt;/code&gt;. Unfortunately, what &lt;code&gt;this&lt;/code&gt; refers to differs depending on what called the function containing &lt;code&gt;this&lt;/code&gt;. A common example, shown below, is what happens when &lt;code&gt;setTimeout&lt;/code&gt; is called. &#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Redis and Relational Data</title>
-      <link>http://localhost:1313/blog/2012/06/04/redis-and-relational-data/</link>
+      <link>https://liamkaufman.com/blog/2012/06/04/redis-and-relational-data/</link>
       <pubDate>Mon, 04 Jun 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/06/04/redis-and-relational-data/</guid>
+      <guid>https://liamkaufman.com/blog/2012/06/04/redis-and-relational-data/</guid>
       <description>&lt;p&gt;&#xA;  &lt;strong&gt;UPDATE:&lt;/strong&gt; Based on the feedback in the comments (Phineas), I&#39;ve added an index to the comments table and updated the results.&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  Using the right tool for the job is a basic tenant amongst programmers. However, with all the currently available database options it&#39;s increasingly difficult to figure out what the right tool is. Sometime it&#39;s nice to have a very simple tool that can be used for many different tasks: Redis. Over the last 4 months I&#39;ve been using Redis heavily and I&#39;ve even started to use it for relational data. I&#39;ve been curious to find out the performance differences between Redis and PostgreSQL. Below I&#39;ll provide an example of storing a simple relational dataset in Redis, and I&#39;ll look at the performance differences between Redis and PostgreSQL.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Adding Authentication, Waiting Lists and Sign Ups to an Express App Using Drawbridge.js and Redis</title>
-      <link>http://localhost:1313/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/</link>
+      <link>https://liamkaufman.com/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/</link>
       <pubDate>Sat, 21 Apr 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/</guid>
+      <guid>https://liamkaufman.com/blog/2012/04/21/adding-authentication-waiting-lists-and-sign-ups-to-and-express-app-using-drawbridge-and-redis/</guid>
       <description>&lt;p&gt;&#xA;There are several popular modules for adding password-based user authentication to an Express.js app. Unfortunately, they require writing lots of code to get started. I prefer the approach that authentication libraries like Devise take: they generate code and views, and you’re free to modify, or delete, what’s created. &#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&#xA;Given the authentication options for Express.js I wanted to create a module that would make adding user authentication quick and easy. Moreover, I also wanted developers to be free to edit and modify the generated views. In addition to authentication I wanted the module to handle sign ups (the type you see on a just-launched startup’s page) and to handle waiting lists and invitations. Based on the module&#39;s functionality I&#39;ve decided to call it Drawbridge.js.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>From Digg to Reddit to Hacker News: What&#39;s Next?</title>
-      <link>http://localhost:1313/blog/2012/03/23/from-digg-to-reddit-to-hacker-news-whats-next/</link>
+      <link>https://liamkaufman.com/blog/2012/03/23/from-digg-to-reddit-to-hacker-news-whats-next/</link>
       <pubDate>Thu, 22 Mar 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/03/23/from-digg-to-reddit-to-hacker-news-whats-next/</guid>
+      <guid>https://liamkaufman.com/blog/2012/03/23/from-digg-to-reddit-to-hacker-news-whats-next/</guid>
       <description>&lt;p&gt;&#xA;Dustin Curtis, the creator of &lt;a href=&#34;http://svbtle.com/&#34;&gt;Svbtle&lt;/a&gt;, recently mentioned on &lt;a href=&#34;https://twitter.com/#!/dcurtis/status/182986897444966402&#34;&gt;Twitter&lt;/a&gt;:&#xA;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;I miss the Hacker News from four years ago. It was awesome. The discussions there are not even worth reading anymore. It&#39;s sad.&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xA; Based on the number of retweets and favorites, I suspect that others agree. In fact the idea that Hacker News is degrading is common enough that it has been addressed on &lt;a href=&#34;http://ycombinator.com/newsguidelines.html&#34;&gt;HN’s guidelines&lt;/a&gt;: &#xA;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA; If your account is less than a year old, please don&#39;t submit comments saying that HN is turning into Reddit. (It&#39;s a common semi-noob illusion.).&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xA;  However, Mr Curtis has been on HN for &lt;a href=&#34;http://news.ycombinator.com/user?id=dcurtis&#34;&gt;over five years&lt;/a&gt;, and is certainly not subject to the &#39;common semi-noob illusion&#39;. Is HN getting worse then?&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Making Hacker News Faster: Two Approaches</title>
-      <link>http://localhost:1313/blog/2012/03/23/making-hacker-news-faster-two-approaches/</link>
+      <link>https://liamkaufman.com/blog/2012/03/23/making-hacker-news-faster-two-approaches/</link>
       <pubDate>Thu, 22 Mar 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/03/23/making-hacker-news-faster-two-approaches/</guid>
+      <guid>https://liamkaufman.com/blog/2012/03/23/making-hacker-news-faster-two-approaches/</guid>
       <description>&lt;p&gt;&#xA;Over the years traffic to &lt;a href=&#34;http://news.ycombinator.com&#34;&gt;Hacker News (HN)&lt;/a&gt;, &#34;a social news website about computer hacking and startup companies&#34; &lt;a href=&#34;http://en.wikipedia.org/wiki/Hacker_News&#34;&gt;(Wikipedia)&lt;/a&gt;, has grown consistently, with an &lt;a href=”http://www.ycombinator.com/images/hntraffic-5mar12.png”&gt;average of 150,000 daily uniques&lt;/a&gt;. The growth in traffic may explain why load times seem increasingly variable. I couldn’t help but wonder if some optimizations could be made to decrease both variability and load times. I&#39;ll propose two broad approaches, the first involves migrating away from table based layouts while the second involves consuming a JSON API.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Scraping Web Pages with jQuery, Node.js and Jsdom</title>
-      <link>http://localhost:1313/blog/2012/03/08/scraping-web-pages-with-jquery-nodejs-and-jsdom/</link>
+      <link>https://liamkaufman.com/blog/2012/03/08/scraping-web-pages-with-jquery-nodejs-and-jsdom/</link>
       <pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/03/08/scraping-web-pages-with-jquery-nodejs-and-jsdom/</guid>
+      <guid>https://liamkaufman.com/blog/2012/03/08/scraping-web-pages-with-jquery-nodejs-and-jsdom/</guid>
       <description>&lt;p&gt;&#xA;I always found it odd that accessing DOM elements with Ruby, or Python, wasn&#39;t as easy as it was with jQuery. Many HTML parsing libraries employ Simple API for XML (SAX) that can handle extremely large XML documents, but is cumbersome and adds complexity. Other parsing libraries use XML Path Language (XPath), which is conceptually simpler than SAX, but still more of an effort than jQuery. I was pleasantly surprised to discover that it&#39;s possible to use jQuery to parse web pages with Node.js. This is accomplished by using &lt;a href=&#34;https://github.com/tmpvar/jsdom&#34;&gt;jsdom, &#34;a javascript implementation of the W3C DOM&#34;&lt;/a&gt;.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why Riak and Node.js Make a Great Pair</title>
-      <link>http://localhost:1313/blog/2012/03/01/why-riak-and-nodejs-make-a-great-pair/</link>
+      <link>https://liamkaufman.com/blog/2012/03/01/why-riak-and-nodejs-make-a-great-pair/</link>
       <pubDate>Thu, 01 Mar 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/03/01/why-riak-and-nodejs-make-a-great-pair/</guid>
+      <guid>https://liamkaufman.com/blog/2012/03/01/why-riak-and-nodejs-make-a-great-pair/</guid>
       <description>&lt;p&gt;&#xA;In the last few years there has been a proliferation of noSQL databases. Searching on Google for &lt;code&gt;site:news.ycombinator.com nosql&lt;/code&gt; yields over 2,500 hits, many of which include include posts asking when you&#39;d want to use a noSQL database. If you&#39;re used to a relational database it might seem like an unnecessary burden to learn another database paradigm, but there&#39;s one open source noSQL database that I think is not only worth the burden, but is a perfect fit for Node.js development: &lt;a href=”http://wiki.basho.com/What-is-Riak%3F.html”&gt;Riak (pronounced &#34;REE-ack&#34;)&lt;/a&gt;. &#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Adding Real-Time To Rails With Socket.IO, Node.js and Backbone.js (With Demo)</title>
-      <link>http://localhost:1313/blog/2012/02/25/adding_real-time_to_rails_with_socket.io_nodejs_and_backbonejs_with_demo/</link>
+      <link>https://liamkaufman.com/blog/2012/02/25/adding_real-time_to_rails_with_socket.io_nodejs_and_backbonejs_with_demo/</link>
       <pubDate>Sat, 25 Feb 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/02/25/adding_real-time_to_rails_with_socket.io_nodejs_and_backbonejs_with_demo/</guid>
-      <description>&lt;p&gt;&#xA;  &lt;a href=&#34;http://node-chatty.herokuapp.com/chatty&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/chatty-screen.png&#34;&gt;&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  UPDATE: see my &lt;a href=&#34;http://localhost:1313/blog/2013/02/27/adding-real-time-to-a-restful-rails-app/&#34;&gt;new article on adding real-time to your Rails application&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  Despite the &lt;a href=&#34;http://gilesbowkett.blogspot.in/2012/02/rails-went-off-rails-why-im-rebuilding.html&#34;&gt;recent distaste for Rails&lt;/a&gt;, I still think its a nice framework for developing websites (e.g. devise &amp;amp; active record). However, if you want real-time communication Socket.IO and Node.js seem to be the best options. If you already have an existing Rails application porting the entire application to Node.js is likely not on option. Fortunately, it is relatively easy to use Rails to serve your client-side Socket.IO web application, while Node.js and Socket.IO are used for real-time communication. The primary goal of this article is to show one method of integrating a real-time application, that is slightly more complex than a todo app, with Rails. Thus, I created Chatty, a simple chat room web application that allows a user to see all the messages in the chat room, or filter the messages by user. &lt;a href=&#34;http://twitter.github.com/bootstrap/index.html&#34;&gt;Twitter&#39;s Bootstrap&lt;/a&gt; was used for the CSS and modal dialogue. &#xA;&lt;/p&gt;</description>
+      <guid>https://liamkaufman.com/blog/2012/02/25/adding_real-time_to_rails_with_socket.io_nodejs_and_backbonejs_with_demo/</guid>
+      <description>&lt;p&gt;&#xA;  &lt;a href=&#34;http://node-chatty.herokuapp.com/chatty&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://liamkaufman.com/images/chatty-screen.png&#34;&gt;&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  UPDATE: see my &lt;a href=&#34;https://liamkaufman.com/blog/2013/02/27/adding-real-time-to-a-restful-rails-app/&#34;&gt;new article on adding real-time to your Rails application&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  Despite the &lt;a href=&#34;http://gilesbowkett.blogspot.in/2012/02/rails-went-off-rails-why-im-rebuilding.html&#34;&gt;recent distaste for Rails&lt;/a&gt;, I still think its a nice framework for developing websites (e.g. devise &amp;amp; active record). However, if you want real-time communication Socket.IO and Node.js seem to be the best options. If you already have an existing Rails application porting the entire application to Node.js is likely not on option. Fortunately, it is relatively easy to use Rails to serve your client-side Socket.IO web application, while Node.js and Socket.IO are used for real-time communication. The primary goal of this article is to show one method of integrating a real-time application, that is slightly more complex than a todo app, with Rails. Thus, I created Chatty, a simple chat room web application that allows a user to see all the messages in the chat room, or filter the messages by user. &lt;a href=&#34;http://twitter.github.com/bootstrap/index.html&#34;&gt;Twitter&#39;s Bootstrap&lt;/a&gt; was used for the CSS and modal dialogue. &#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Integrating Backbone Boilerplate with Rails 3</title>
-      <link>http://localhost:1313/blog/2012/02/18/integrating-backbone-boilerplate-with-rails3/</link>
+      <link>https://liamkaufman.com/blog/2012/02/18/integrating-backbone-boilerplate-with-rails3/</link>
       <pubDate>Sat, 18 Feb 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/02/18/integrating-backbone-boilerplate-with-rails3/</guid>
+      <guid>https://liamkaufman.com/blog/2012/02/18/integrating-backbone-boilerplate-with-rails3/</guid>
       <description>&lt;p&gt;&#xA;Despite making several small Backbone.js apps in the past year, Backbone.js had never really clicked with me. I wasn&#39;t crazy about having to spend time thinking about file and folder organizing for JavaScript and template files. I was also unsure how all the pieces would fit together. Thanks to Tim Branyen&#39;s &lt;a href=&#34;http://tbranyen.github.com/backbone-boilerplate/&#34;&gt;Backbone Boilerplate&lt;/a&gt; those issues have been significantly reduced. According to Backbone Boilerplate&#39;s documentation: &#34;This boilerplate is the product of much research and frustration. Existing boilerplates freely modify Backbone core, lack a build process, and are very prescriptive; this boilerplate changes that.&#34;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Pushing Files to the Browser Using Delivery.js, Socket.IO and Node.js</title>
-      <link>http://localhost:1313/blog/2012/02/11/12-pushing-files-to-the-browser-using-deliveryjs-socketio-and-nodejs/</link>
+      <link>https://liamkaufman.com/blog/2012/02/11/12-pushing-files-to-the-browser-using-deliveryjs-socketio-and-nodejs/</link>
       <pubDate>Sat, 11 Feb 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/02/11/12-pushing-files-to-the-browser-using-deliveryjs-socketio-and-nodejs/</guid>
+      <guid>https://liamkaufman.com/blog/2012/02/11/12-pushing-files-to-the-browser-using-deliveryjs-socketio-and-nodejs/</guid>
       <description>&lt;p&gt;&#xA;Recently I&#39;ve been working with both the HTML 5 File API and Socket.IO and it occured to me that those technologies could be used to send, and push, files between the client and server. Immediately I set about making delivery.js, a simple node module that makes it extremely easy to send and push files between the client and the server via Socket.IO. &#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;I should note that this is my first node module, so constructive critism and feedback are welcome and encouraged! &#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Testing Socket.IO with Mocha, Should.js and Socket.IO Client</title>
-      <link>http://localhost:1313/blog/2012/01/28/testing-socketio-with-mocha-should-and-socketio-client/</link>
+      <link>https://liamkaufman.com/blog/2012/01/28/testing-socketio-with-mocha-should-and-socketio-client/</link>
       <pubDate>Sat, 28 Jan 2012 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2012/01/28/testing-socketio-with-mocha-should-and-socketio-client/</guid>
+      <guid>https://liamkaufman.com/blog/2012/01/28/testing-socketio-with-mocha-should-and-socketio-client/</guid>
       <description>&lt;p&gt;&#xA;I’m currently in the midst of creating an application that utilizes &lt;a href=&#34;http://socket.io/&#34;&gt;Socket.IO&lt;/a&gt; for real-time communication between users. Using  &lt;a href=&#34;http://visionmedia.github.com/mocha/&#34;&gt;mocha&lt;/a&gt; and &lt;a href=&#34;https://github.com/visionmedia/should.js&#34;&gt;should.js&lt;/a&gt; I was able to test objects within my node app. However, I quickly found that there were some odd synchronization issues between clients that the test cases couldn&#39;t cover. To test the interaction between clients I needed a way to programatically communicate to my node server: Enter &lt;a href=&#34;https://github.com/LearnBoost/socket.io-client&#34;&gt;socket.io-client&lt;/a&gt;.&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;&lt;a class=&#34;github&#34; href=&#34;https://github.com/liamks/Testing-Socket.IO&#34;&gt;&lt;span&gt;&lt;/span&gt;Testing Socket.IO on Github&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;h2&gt;&#xA;  Writing Tests For your Socket.io Application&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&#xA;As an example of how to test your socket.io application we’ll create a small chat application and test it using: &lt;a href=&#34;https://github.com/LearnBoost/socket.io-client&#34;&gt;socket.io-client&lt;/a&gt;, &lt;a href=&#34;http://visionmedia.github.com/mocha/&#34;&gt;mocha&lt;/a&gt; and &lt;a href=&#34;https://github.com/visionmedia/should.js&#34;&gt;should.js&lt;/a&gt;.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Examples I Want to See in JavaScript Frameworks.</title>
-      <link>http://localhost:1313/blog/2011/12/13/examples_i_want_to_see_in_javascript_frameworks/</link>
+      <link>https://liamkaufman.com/blog/2011/12/13/examples_i_want_to_see_in_javascript_frameworks/</link>
       <pubDate>Tue, 13 Dec 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2011/12/13/examples_i_want_to_see_in_javascript_frameworks/</guid>
+      <guid>https://liamkaufman.com/blog/2011/12/13/examples_i_want_to_see_in_javascript_frameworks/</guid>
       <description>&lt;p&gt;&#xA;  With the public release of &lt;a href=&#34;http://emberjs.com&#34;&gt;ember.js&lt;/a&gt;,&#xA;  I excitedly poured over the examples hoping to find a framework that &#xA;  would make Creating, Reading, Updating and Deleting (CRUD) easier. When&#xA;  push comes to shove, the vast majority of apps that I&#39;ve worked on&#xA;  involve CRUD. &#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&#xA;  I want to see the following (excuse the pseudo code):&lt;br /&gt;&#xA;``` javascript Model&#xA;model({&#xA;  validation: function(m){...}&#xA;});&#xA;```&#xA;&#xA;``` javascript Controller&#xA;controller({&#xA;  show: function(){...},&#xA;&#xA;  index: function(){...},&#xA;&#xA;  new: function(){...},&#xA;&#xA;  create: function(){...},&#xA;&#xA;  ...&#xA;&#xA;});&#xA;```&#xA;&#xA;``` html Form&#xA;&lt;form action=&#39;&#39;&gt;&#xA;  &lt;input type=&#39;text&#39; name=&#39;firstName&#39;&gt;&#xA;  &lt;input type=&#39;submit&#39; value=&#39;submit&#39;&gt;&#xA;&lt;/form&gt;&#xA;```&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>What is the best way of Mastering JavaScript?</title>
-      <link>http://localhost:1313/blog/2011/09/09/what-is-the-best-way-of-mastering-javascript/</link>
+      <link>https://liamkaufman.com/blog/2011/09/09/what-is-the-best-way-of-mastering-javascript/</link>
       <pubDate>Fri, 09 Sep 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2011/09/09/what-is-the-best-way-of-mastering-javascript/</guid>
+      <guid>https://liamkaufman.com/blog/2011/09/09/what-is-the-best-way-of-mastering-javascript/</guid>
       <description>&lt;p&gt;&#xA;I want to master JavaScript. Before humbly doing so, I think it’s important to define what I think mastering JS consists of. In my opinion there are two parts to mastering a programming language. The first is mastering the language itself: syntax, important functions, classes, idioms, etc. The second part is mastering the programming paradigm, or paradigms, that the language falls in. This second part is difficult with JS, as it is &lt;a href=&#34;http://en.wikipedia.org/wiki/JavaScript&#34;&gt;object oriented, functional and imperative &lt;/a&gt;. Thus, to master JS I must master both parts: 1) the language and 2) the paradigms.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Liamkaufman.com gets a new look</title>
-      <link>http://localhost:1313/blog/2011/08/23/liamkaufmancom-gets-a-new-look/</link>
+      <link>https://liamkaufman.com/blog/2011/08/23/liamkaufmancom-gets-a-new-look/</link>
       <pubDate>Tue, 23 Aug 2011 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2011/08/23/liamkaufmancom-gets-a-new-look/</guid>
+      <guid>https://liamkaufman.com/blog/2011/08/23/liamkaufmancom-gets-a-new-look/</guid>
       <description>&lt;p&gt;&#xA;After 3 years without change, I&#39;ve redone my personal website using Jekyll and Bootstrap. The previous version of liamkaufman.com was hosted on Google App Engine and consisted of a very basic CMS that I made before I knew what I was doing. I was both unhappy with the look of the site, and the code behind it. At the same time I was interested in using Jekyll, as I wanted to avoid the hassles associated with database backed sites. I also appreciate the fact that my site, and it’s content are easy to deploy and update via Github. &#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>pyItunes, a Python iTunes Library Parser</title>
-      <link>http://localhost:1313/blog/2009/03/18/pyitunes-a-python-itunes-library-parser/</link>
+      <link>https://liamkaufman.com/blog/2009/03/18/pyitunes-a-python-itunes-library-parser/</link>
       <pubDate>Wed, 18 Mar 2009 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2009/03/18/pyitunes-a-python-itunes-library-parser/</guid>
+      <guid>https://liamkaufman.com/blog/2009/03/18/pyitunes-a-python-itunes-library-parser/</guid>
       <description>&lt;p&gt;&#xA;&#x9;In an effort to add some personality to this site I thought I&#39;d list my favourite songs. iTunes provides&#xA;&#x9;a mechanism for users to rate songs, by giving a song 0 to 5 stars. After years of listening to music, and rating it,&#xA;&#x9;I have a large collection of rated songs. Manually copying and pasting each song into an HTML file seemed&#xA;&#x9; inefficient and time consuming, enter Python.&#xA;&lt;/p&gt;&#xA;&#xA;&lt;p&gt;&#xA;&#x9;In an effort to learn Python, and parse my iTunes library, I created pyItunes, a Python module. pyItunes includes three classes that can parse the &#34;iTunes Music Library.xml&#34; file and convert it into list of Song objects. I decided to roll my own micro-xml parser that can only parse the iTunes xml file. Although, reinventing the wheel, especially an XML parser, is likely a horrible idea I felt it would be a good learning experience. In future versions I may swap an existing XML parser that is much faster and more efficient than the one I created.&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://liamkaufman.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://liamkaufman.com/about/</guid>
       <description>&lt;p&gt;&#xA;    Liam Kaufman currently leads product at Cambridge Cognition, a company&#xA;    that specializes in computerized cognitive assessments and speech-based&#xA;    biomarkers. From time to time Liam writes about AI, medicine and product. &#xA;    The intention of this site is to help him learn about these topics through&#xA;    writing.&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;    Prior to Cambridge Cognition, Liam was the cofounder and CEO of Winterlight Labs.&#xA;    Winterlight developed speech-based biomarkers which were used by multiple biotech and life science&#xA;    companies to measure response to treatment and change overtime across neurology &#xA;    and psychiatry. Winterlight was venture backed and sold to Cambridge Cognition&#xA;    in January 2023.&#xA;&lt;/p&gt;</description>
     </item>
   </channel>

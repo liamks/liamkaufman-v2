@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <title>
   Smiley Faces in Linux Source Code and Token Statistics · Liam Kaufman
 </title>
@@ -24,7 +24,7 @@
   <meta name="twitter:title" content="Smiley Faces in Linux Source Code and Token Statistics">
   <meta name="twitter:description" content="Github uses Linguist, a Ruby library, to help detect which programming language is in a given file. Recently, an issue was filed that indicated that Linguist incorrectly classifies Mercury (a programming language) files as Objective-c since they both use the same extension (.m). Linguist’s primary method for language detection is a file’s extension - a method that fell short for Mercury. If Mercury were added to Linguist, then there would be two languages with the same extension - and this is where things get interesting. If two languages share the same extension, or the file does not have an extension, Linguist has 3 methods for guessing the language. First it checks if the file has a shebang (#!/bin/sh). If there is no shebang the second method it uses is a set of heuristics. For instance, if the file includes the “:-” token it concludes that the contents are prologue code, or if “defun” is present it’s common lisp. If it still hasn’t found a match the third method it uses is a Bayesian classifier. Roughly speaking the classifier iterates over all of a file’s tokens, and for each token determines the probability that it is present in each programming language. Subsequently, it sums all those probabilities, sorts the results, and returns an array of language-probability pairs (e.g [[‘Ruby’, 0.8], [‘Python’, 0.2]]).">
 
-<meta property="og:url" content="http://localhost:1313/blog/2014/08/05/smily-faces-in-linux-source-code/">
+<meta property="og:url" content="https://liamkaufman.com/blog/2014/08/05/smily-faces-in-linux-source-code/">
   <meta property="og:site_name" content="Liam Kaufman">
   <meta property="og:title" content="Smiley Faces in Linux Source Code and Token Statistics">
   <meta property="og:description" content="Github uses Linguist, a Ruby library, to help detect which programming language is in a given file. Recently, an issue was filed that indicated that Linguist incorrectly classifies Mercury (a programming language) files as Objective-c since they both use the same extension (.m). Linguist’s primary method for language detection is a file’s extension - a method that fell short for Mercury. If Mercury were added to Linguist, then there would be two languages with the same extension - and this is where things get interesting. If two languages share the same extension, or the file does not have an extension, Linguist has 3 methods for guessing the language. First it checks if the file has a shebang (#!/bin/sh). If there is no shebang the second method it uses is a set of heuristics. For instance, if the file includes the “:-” token it concludes that the contents are prologue code, or if “defun” is present it’s common lisp. If it still hasn’t found a match the third method it uses is a Bayesian classifier. Roughly speaking the classifier iterates over all of a file’s tokens, and for each token determines the probability that it is present in each programming language. Subsequently, it sums all those probabilities, sorts the results, and returns an array of language-probability pairs (e.g [[‘Ruby’, 0.8], [‘Python’, 0.2]]).">
@@ -37,7 +37,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:1313/blog/2014/08/05/smily-faces-in-linux-source-code/">
+<link rel="canonical" href="https://liamkaufman.com/blog/2014/08/05/smily-faces-in-linux-source-code/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -47,7 +47,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -98,7 +98,7 @@
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://localhost:1313/">
+    <a class="navigation-title" href="https://liamkaufman.com/">
       Liam Kaufman
     </a>
     
@@ -133,7 +133,7 @@
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="http://localhost:1313/blog/2014/08/05/smily-faces-in-linux-source-code/">
+            <a class="title-link" href="https://liamkaufman.com/blog/2014/08/05/smily-faces-in-linux-source-code/">
               Smiley Faces in Linux Source Code and Token Statistics
             </a>
           </h1>
@@ -519,7 +519,7 @@
 
   
   
-  <script src="/js/coder.js"></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   
