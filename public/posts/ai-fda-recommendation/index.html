@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <title>
   FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs · Liam Kaufman
 </title>
@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs">
   <meta name="twitter:description" content="Last week the FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs. Overall the guidance covers the basics for model development, training and testing and the special considerations based on the level of risk associated with the model. Reassuringly the guidance doesn’t deviate from many best practices that the industry has developed over the last decade. In many cases the recommendations are high level and are left up to the sponsor to determine the exact methodology and rationale for their decisions.">
 
-<meta property="og:url" content="https://liamkaufman.com/posts/ai-fda-recommendation/">
+<meta property="og:url" content="http://localhost:1313/posts/ai-fda-recommendation/">
   <meta property="og:site_name" content="Liam Kaufman">
   <meta property="og:title" content="FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs">
   <meta property="og:description" content="Last week the FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs. Overall the guidance covers the basics for model development, training and testing and the special considerations based on the level of risk associated with the model. Reassuringly the guidance doesn’t deviate from many best practices that the industry has developed over the last decade. In many cases the recommendations are high level and are left up to the sponsor to determine the exact methodology and rationale for their decisions.">
@@ -35,7 +35,7 @@
 
 
 
-<link rel="canonical" href="https://liamkaufman.com/posts/ai-fda-recommendation/">
+<link rel="canonical" href="http://localhost:1313/posts/ai-fda-recommendation/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -45,7 +45,7 @@
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.4b392a85107b91dbdabc528edf014a6ab1a30cd44cafcd5325c8efe796794fca.css" integrity="sha256-SzkqhRB7kdvavFKO3wFKarGjDNRMr81TJcjv55Z5T8o=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
 
 
 
@@ -96,7 +96,7 @@
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="https://liamkaufman.com/">
+    <a class="navigation-title" href="http://localhost:1313/">
       Liam Kaufman
     </a>
     
@@ -131,7 +131,7 @@
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://liamkaufman.com/posts/ai-fda-recommendation/">
+            <a class="title-link" href="http://localhost:1313/posts/ai-fda-recommendation/">
               FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs
             </a>
           </h1>
@@ -160,18 +160,22 @@
         <p>Last week the <a href="https://www.fda.gov/media/184830/download"  class="external-link" target="_blank" rel="noopener">FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs</a>. Overall the guidance covers the basics for model development, training and testing and the special considerations based on the level of risk associated with the model. Reassuringly the guidance doesn’t deviate from many best practices that the industry has developed over the last decade. In many cases the recommendations are high level and are left up to the sponsor to determine the exact methodology and rationale for their decisions.</p>
 <p>The document introduces some new language - the “credibility assessment plan”, but much of the language should be familiar to those developing AI models in this space.</p>
 <p>It highlights the unique challenges of using AI in regulatory decision making:</p>
-<p>Variability in quality, size and representatives of datasets for training AI models - data should be fit for use (this is something we’ve seen with many of our collaborations).
-Complexity surrounding how models are developed and how they produce answers requires greater transparency.
-Interpretability of findings.
-Model drift - performance to change over time with new inputs that differ from training data.</p>
+<ol>
+<li>Variability in quality, size and representatives of datasets for training AI models - data should be fit for use (this is something we’ve seen with many of our collaborations).</li>
+<li>Complexity surrounding how models are developed and how they produce answers requires greater transparency.</li>
+<li>Interpretability of findings.</li>
+<li>Model drift - performance to change over time with new inputs that differ from training data.</li>
+</ol>
 <p>A seven step process is defined to “establish the credibility of an AI Model output for a specific context of use based on model risk”. Below are the seven steps:</p>
-<p>Define the question of interest that will be addressed by the AI model
-Define the context of use for the AI model (e.g. how will the model be used, will it be used in isolation or with additional data).
-Assess the AI model risk. There are two primary variables for looking at risk: a) model influence and b) decision outcome. If the model has high influence (e.g. the only deciding factor) and a significant decision outcome, then it will be high risk.
-Develop a plan (“credibility assessment plan”) to establish the credibility of AI model output within the context of use.
-Execute the plan.
-Document the results of the credibility assessment plan and discuss deviations from the plan.
-Determine the adequacy of the AI model for the context of use.</p>
+<ol>
+<li>Define the question of interest that will be addressed by the AI model</li>
+<li>Define the context of use for the AI model (e.g. how will the model be used, will it be used in isolation or with additional data).</li>
+<li>Assess the AI model risk. There are two primary variables for looking at risk: a) model influence and b) decision outcome. If the model has high influence (e.g. the only deciding factor) and a significant decision outcome, then it will be high risk.</li>
+<li>Develop a plan (“credibility assessment plan”) to establish the credibility of AI model output within the context of use.</li>
+<li>Execute the plan.</li>
+<li>Document the results of the credibility assessment plan and discuss deviations from the plan.</li>
+<li>Determine the adequacy of the AI model for the context of use.</li>
+</ol>
 <p>Finally the document outlines several considerations around model life cycle maintenance and emphasizes connecting with the FDA early to get feedback on the credibility assessment plan.</p>
 
       </div>
@@ -207,7 +211,7 @@ Determine the adequacy of the AI model for the context of use.</p>
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.js"></script>
   
 
   
