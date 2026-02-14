@@ -6,8 +6,15 @@
     <description>Recent content on Liam Kaufman</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 13 Jan 2026 20:10:29 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 14 Feb 2026 16:24:40 -0500</lastBuildDate>
     <atom:link href="https://liamkaufman.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Is the Drug Development Pathway worth pursuing?</title>
+      <link>https://liamkaufman.com/posts/ddt-pathway/</link>
+      <pubDate>Sat, 14 Feb 2026 16:24:40 -0500</pubDate>
+      <guid>https://liamkaufman.com/posts/ddt-pathway/</guid>
+      <description>&lt;p&gt;I was recently discussing the FDA’s &lt;a href=&#34;https://www.fda.gov/drugs/development-approval-process-drugs/drug-development-tool-ddt-qualification-programs&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Drug Development Tool (DDT) qualification program&lt;/a&gt; with a colleague. They questioned the utility of the pathway and I’ve heard similar sentiment from others over the past year or two. For people not deeply familiar with the DDT pathway here’s some additional context:&lt;/p&gt;&#xA;&lt;p&gt;The pathway was created in 2016 as part of the 21st Century Cures Act and outlined 3 streams: 1) biomarkers, 2) clinical outcome assessments and 3) animal models.&#xA;It was intended to help spur the development of tools outside of the IND/NDA/BLA pathway.&#xA;As of January 1st, 2026 only 8 COAs have been fully qualified - this is less than one per year since the program started.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>FDA released a draft guidance on the use of AI to support regulatory decision-making for drugs</title>
       <link>https://liamkaufman.com/posts/ai-fda-recommendation/</link>
