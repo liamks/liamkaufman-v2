@@ -20,5 +20,5 @@ As of January 1st, 2026 only 8 COAs have been fully qualified - this is less tha
 
 [Yang and colleagues (2025)](https://pmc.ncbi.nlm.nih.gov/articles/PMC12181102/) did a deep dive on the efficacy of the program. At the time they did their research only 7 were fully qualified - none since 2020 and all of the ones that were qualified had been submitted right before the program was created. Additionally, all the qualified COAs were qualified as measures for exploratory use. Finally, the average time for qualification was 6 years!
 
-Given that most COAs used in trials never went through the DDT qualification process, this begs the question: is their value going through the pathway? Is it easier to just develop tools through the existing IND/NDA/BLA pathways?
+Given that most COAs used in trials never went through the DDT qualification process, this begs the question: is there value going through the pathway? Is it easier to just develop tools through the existing IND/NDA/BLA pathways?
 
